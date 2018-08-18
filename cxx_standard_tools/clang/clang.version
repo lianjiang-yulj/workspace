@@ -1,6 +1,7 @@
 clang+llvm-3.6.0-x86_64-linux-gnu-ubuntu-14.04.tar
 
 https://www.jb51.net/LINUXjishu/43356.html
-bunzip2 -d  xxx.bz2// xxx.tar.bz2->xxx.tar
+bunzip2 -d  xxx.tar.bz2 // xxx.tar.bz2->xxx.tar
+bzip2 -z xxx.tar // xxx.tar->xxx.tar.bz2
 tar -cvjf clang+llvm-3.6.0-x86_64-linux-gnu-ubuntu-14.04-2.tar.bz2 clang+llvm-3.6.0-x86_64-linux-gnu.tar
 tar -xvjf xxx.bz2
