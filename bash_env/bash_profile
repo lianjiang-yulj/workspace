@@ -1,0 +1,65 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+
+# User specific environment and startup programs
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin
+
+# User specific environment and startup programs
+
+#export GOPATH=/home/lianjiang.yulj/workspace/tools/go
+export JAVA_HOME=/usr/alibaba/java/
+
+export CLANG_ROOT=/home/lianjiang.yulj/workspace/cxx_standard_tools/clang/
+export PATH=$CLANG_ROOT/bin:$PATH
+
+#/usr/local/bin/keychain ~/.ssh/id_dsa > /dev/null
+eval `/usr/local/bin/keychain --eval id_dsa`
+
+export LANG=en_US.UTF-8
+
+ulimit -c unlimited
+
+alias grep='grep --color=always'
+
+#read -t 10 -p "Display all agent_group? [y/N] " answer
+answer=y
+case $answer in 
+    Y|y) 
+
+        for i in my-offline-dev icbu-search-dev
+        do
+            #		echo "armorygroup ->>>> $i"
+            #		armory -g $i -l
+            continue
+        done ;;
+    N|n) 
+        echo "";; 
+    *) 
+        echo "";; 
+esac
+
+alias gm='git merge'
+alias gd='git diff'
+alias gb='git branch'
+alias gl='git lg'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gci='git commit'
+alias gco='git checkout'
+alias gclone='git clone --recursive'
+alias gpush='git push origin'
+alias gpull='git pull origin'
+alias dpull='sudo docker pull'
+alias dpush='sudo docker push'
+alias ha3_env='sudo docker exec -u lianjiang.yulj -it lianjiang.yulj.ha3 /bin/bash'
+alias dev_env='sudo docker exec -it lianjiang.yulj.env /bin/bash'
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
