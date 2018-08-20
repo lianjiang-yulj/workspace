@@ -19,7 +19,7 @@ export CLANG_ROOT=/home/lianjiang.yulj/workspace/cxx_standard_tools/clang/
 export PATH=$CLANG_ROOT/bin:$PATH
 
 #/usr/local/bin/keychain ~/.ssh/id_dsa > /dev/null
-eval `/usr/local/bin/keychain --eval id_dsa`
+#eval `/usr/local/bin/keychain --eval id_dsa`
 
 export LANG=en_US.UTF-8
 
