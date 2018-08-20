@@ -6,15 +6,21 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 export PATH
-# User specific environment and startup programs
 
+# User specific environment and startup programs
 #export GOPATH=/home/lianjiang.yulj/workspace.github/tools/go
 export JAVA_HOME=/usr/java/jdk1.8.0_77
+export WORK_HOME=/home/lianjiang.yulj/workspace.github
+export GCC_HOME=$WORK_HOME/cxx_standard_tools/gcc-8.1.0/
+export GDB_HOME=$WORK_HOME/cxx_standard_tools/gdb-8.1/
+
+export LD_LIBRARY_PATH=$GCC_HOME/lib64:$GDB_HOME/usr/lib:/usr/local/lib64:/usr/local/lib:$LD_LIBRARY_PATH
+export PATH=$GCC_HOME/bin:$GDB_HOME/usr/bin:/usr/local/bin:$PATH
+
 
 #export CLANG_ROOT=/home/lianjiang.yulj/workspace.github/cxx_standard_tools/clang/
 #export PATH=$CLANG_ROOT/bin:$PATH
