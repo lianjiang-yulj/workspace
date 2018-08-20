@@ -26,3 +26,31 @@ $PWD/../configure --prefix=$HOME/gcc-8.1.0 --enable-languages=c,c++,go --disable
 make
 make install
 
+
+
+##some problem
+1. gdb debuginfo
+Q: "Missing separate debuginfos, use: debuginfo-install glibc-2.17-222.alios7.1.x86_64"
+
+A: you can run cmd: "debuginfo-install glibc-2.17-222.alios7.1.x86_64", but you can ignore this warnning, it doesn't matter 
+ http://debuginfo.centos.org/7/x86_64/
+
+2. gdb aato-load safe-path
+
+Q:
+Starting program: /home/lianjiang.yulj/workspace.github/cxx_standard_tools/a
+warning: File "/home/lianjiang.yulj/workspace.github/cxx_standard_tools/gcc-8.1.0/lib64/libstdc++.so.6.0.25-gdb.py" auto-loading has been declined by your `auto-load safe-path' set to "$debugdir:$datadir/auto-load".
+To enable execution of this file add
+	add-auto-load-safe-path /home/lianjiang.yulj/workspace.github/cxx_standard_tools/gcc-8.1.0/lib64/libstdc++.so.6.0.25-gdb.py
+line to your configuration file "/home/lianjiang.yulj/.gdbinit".
+To completely disable this security protection add
+	set auto-load safe-path /
+line to your configuration file "/home/lianjiang.yulj/.gdbinit".
+For more information about this security protection see the
+"Auto-loading safe path" section in the GDB manual.  E.g., run from the shell:
+	info "(gdb)Auto-loading safe path"
+
+
+
+
+A: see /home/lianjiang.yulj/workspace.github/bash_env/gdbinit.gdb-8.1.0

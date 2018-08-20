@@ -1,0 +1,7 @@
+add-auto-load-safe-path /home/lianjiang.yulj/workspace.github/cxx_standard_tools/gcc-8.1.0/lib64/libstdc++.so.6.0.25-gdb.py
+#python
+#import sys
+#sys.path.insert(0, '/home/lianjiang.yulj/workspace.github/cxx_standard_tools/python')
+#from libstdcxx.v6.printers import register_libstdcxx_printers
+#register_libstdcxx_printers (None)
+#end
