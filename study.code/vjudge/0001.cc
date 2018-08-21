@@ -16,6 +16,7 @@ int32_t main() {
     cout << num << endl;
     q.push(num);
     if (q.size() > 3) q.pop();
+    break;
   }
 
   vector<int32_t> ans;
