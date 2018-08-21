@@ -15,18 +15,15 @@ export PATH
 #export GOPATH=/home/lianjiang.yulj/workspace.github/tools/go
 export JAVA_HOME=/usr/java/jdk1.8.0_77
 export WORK_HOME=/home/lianjiang.yulj/workspace.github
-export GCC_HOME=$WORK_HOME/cxx_standard_tools/gcc-8.1.0/
-export GDB_HOME=$WORK_HOME/cxx_standard_tools/gdb-8.1/
-export CLANG_HOME=$WORK_HOME/cxx_standard_tools/clang/clang+llvm-3.6.0-x86_64-linux-gnu/
-#export GOROOT=$WORK_HOME/opensource/go1.10.3/usr/local/go
+export GCC_HOME=$WORK_HOME/cxx_standard_tools/gcc/
+export GDB_HOME=$WORK_HOME/cxx_standard_tools/gdb/
+export CLANG_ROOT=$WORK_HOME/cxx_standard_tools/clang/clang/
+#export GOROOT=$WORK_HOME/opensource/go/usr/local/go
 
 export LD_LIBRARY_PATH=$GCC_HOME/lib64:$GDB_HOME/usr/lib:/usr/local/lib64:/usr/local/lib:$LD_LIBRARY_PATH
-export PATH=$GCC_HOME/bin:$GDB_HOME/usr/bin:$CLANG_HOME/bin:/usr/local/bin:$PATH
+export PATH=$GCC_HOME/bin:$GDB_HOME/usr/bin:$CLANG_ROOT/bin:/usr/local/bin:$PATH
 #export PATH=$PATH:$GOROOT/bin
 
-
-#export CLANG_ROOT=/home/lianjiang.yulj/workspace.github/cxx_standard_tools/clang/
-#export PATH=$CLANG_ROOT/bin:$PATH
 
 #/usr/local/bin/keychain ~/.ssh/id_dsa > /dev/null
 #eval `/usr/local/bin/keychain --eval id_dsa`

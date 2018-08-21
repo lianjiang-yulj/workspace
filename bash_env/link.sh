@@ -1,4 +1,12 @@
-ln -s /home/lianjiang.yulj/workspace.github/bash_env/bash_profile /home/lianjiang.yulj/.bash_profile
-ln -s /home/lianjiang.yulj/workspace.github/bash_env/gitconfig /home/lianjiang.yulj/.gitconfig 
-ln -s /home/lianjiang.yulj/workspace.github/bash_env/gdbinit.gdb-8.1.0 /home/lianjiang.yulj/.gdbinit
-ln -s /home/lianjiang.yulj/workspace.github/bash_env/go_profile /home/lianjiang.yulj/.profile
+link_path=`readlink -f $0`
+echo -e "bash $link_path \n"
+
+dir=`dirname $link_path`
+for f in bash_profile gitconfig gdbinit profile
+
+do
+cmd="ln -s $dir/$f $HOME/.$f"
+echo $cmd
+
+eval $cmd
+done

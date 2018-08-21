@@ -1,2 +1,0 @@
-export GOROOT=$WORK_HOME/opensource/go1.10.3/usr/local/go
-export PATH=$GOROOT/bin:$PATH
