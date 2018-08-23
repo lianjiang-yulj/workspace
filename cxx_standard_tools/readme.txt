@@ -8,7 +8,10 @@ make
 make -C gdb install
 
 PS: install readline, textinfo before
-python: ./configure --enable-shared --enable-static --enable-optimizations --enable-unicode=ucs4
+sudo yum install zlib-devel zlib -bcurrent
+sudo yum install openssl openssl-devel openssl-libs
+download python-2.7.15.source code
+python: ./configure --enable-shared --enable-static --enable-optimizations --enable-unicode=ucs4 --with-zlib
 
 gcc:
 https://mirrors.ustc.edu.cn/gnu/gcc/

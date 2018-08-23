@@ -1,0 +1,35 @@
+0. install tensorflow
+https://www.tensorflow.org/install/install_linux?hl=zh-cn
+
+use virtualenv
+you can install it through pip, not apt-get
+
+----install pip
+1. install python2.7.15
+2. instlal pip
+#prepare environment, see .bash_profile, add it if not exists
+see bash_profile: export  PYTHONPATH=/usr/lib/python2.7/site-packages/:$PYTHONPATH
+sudo yum install zip zip-devel -bcurrent
+sudo yum install openssl openssl-devel openssl-libs
+if error: no module : zlib, please recompile python and install it again
+https://pip.pypa.io/en/stable/
+
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+method1 user: python2.7 get-pip.py --user # isntall in /home/lianjiang.yulj/.local/bin
+method2 root: sudo python2.7 get-pip.py # install in /usr/local/bin
+
+root:
+sudo easy_install-2.7 -U pip
+
+user:
+./local/bin/easy_install-2.7 -U pip # update pip
+test: which pip; pip -V
+
+3. install python virtualenv
+root:
+export  PYTHONPATH=/usr/lib/python2.7/site-packages/:$PYTHONPATH
+sudo pip install virtualenv
+
+user:
+export PYTHONPATH=""
+.local/bin/pip2.7  install virtualenv setuptools wheel --user
