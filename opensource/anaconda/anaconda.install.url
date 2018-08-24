@@ -3,4 +3,28 @@ https://www.anaconda.com/download/#linux
 
 wget  https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
 
-2. 
+before install it, you should prefend PYTHONPATH, eg: export PYTHONPATH=""
+
+bash Anaconda3-5.2.0-Linux-x86_64.sh
+
+2. update conda
+conda update -n base conda
+
+see how to start it: https://conda.io/docs/user-guide/getting-started.html
+
+3. create
+conda create --name tf.conda
+
+4. list your environment
+conda info --envs
+
+5. start / stop
+To activate this environment, use
+#
+#     $ conda activate tf.conda.py3
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+
