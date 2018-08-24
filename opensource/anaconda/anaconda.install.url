@@ -18,7 +18,12 @@ conda create --name tf.conda
 4. list your environment
 conda info --envs
 
-5. start / stop
+5. see bashrc in bash_env/, please check
+. /home/lianjiang.yulj/anaconda3/etc/profile.d/conda.sh
+#export PATH="/home/lianjiang.yulj/anaconda3/bin:$PATH"
+conda activate
+
+6. start / stop
 To activate this environment, use
 #
 #     $ conda activate tf.conda.py3

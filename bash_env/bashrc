@@ -11,4 +11,6 @@ fi
 # User specific aliases and functions
 
 # added by Anaconda3 installer
-export PATH="/home/lianjiang.yulj/anaconda3/bin:$PATH"
+. /home/lianjiang.yulj/anaconda3/etc/profile.d/conda.sh
+#export PATH="/home/lianjiang.yulj/anaconda3/bin:$PATH"
+conda activate
