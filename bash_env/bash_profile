@@ -20,7 +20,10 @@ export CLANG_ROOT=$WORK_HOME/cxx_standard_tools/clang/clang/
 
 export LD_LIBRARY_PATH=$GCC_HOME/lib64:$GDB_HOME/usr/lib:/usr/local/lib64:/usr/local/lib:$LD_LIBRARY_PATH
 export PATH=$GCC_HOME/bin:$GDB_HOME/usr/bin:$CLANG_ROOT/bin:/usr/local/bin:$PATH
-export PYTHONPATH=/usr/lib/python2.7/site-packages/:$PYTHONPATH
+export PYTHONPATH=/usr/lib/python2.7/site-packages/:/usr/lib64/python2.7/site-packages/:$PYTHONPATH
+
+export BAZEL_ROOT=$WORK_HOME/opensource/bazel_tutorial/bazel/
+export PATH=$BAZEL_ROOT/output/:$PATH
 
 #/usr/local/bin/keychain ~/.ssh/id_dsa > /dev/null
 #eval `/usr/local/bin/keychain --eval id_dsa`

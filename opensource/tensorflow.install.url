@@ -16,7 +16,17 @@ https://pip.pypa.io/en/stable/
 
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 method1 user: python2.7 get-pip.py --user # isntall in /home/lianjiang.yulj/.local/bin
-method2 root: sudo python2.7 get-pip.py # install in /usr/local/bin
+method2 root: sudo python2.7 get-pip.py # install in /usr/local/bin or /usr/bin, decide by python.configure.--prefix
+
+
+3. install python virtualenv
+root:
+export  PYTHONPATH=/usr/lib/python2.7/site-packages/:$PYTHONPATH
+sudo pip install virtualenv setuptools wheel numpy
+
+user:
+export PYTHONPATH=""
+.local/bin/pip2.7  install virtualenv setuptools wheel numpy --user
 
 root:
 sudo easy_install-2.7 -U pip
@@ -25,11 +35,29 @@ user:
 ./local/bin/easy_install-2.7 -U pip # update pip
 test: which pip; pip -V
 
-3. install python virtualenv
-root:
-export  PYTHONPATH=/usr/lib/python2.7/site-packages/:$PYTHONPATH
-sudo pip install virtualenv
+4. source compile tensorflow
 
-user:
-export PYTHONPATH=""
-.local/bin/pip2.7  install virtualenv setuptools wheel --user
+a. install bazel
+https://docs.bazel.build/versions/master/install.html
+to
+https://docs.bazel.build/versions/master/install-ubuntu.html
+to
+Step 2: Download Bazel
+https://github.com/bazelbuild/bazel/releases
+to
+https://github.com/bazelbuild/bazel/releases/download/0.16.1/bazel-0.16.1-dist.zip
+to
+install jdk8
+to
+unzip bazel-xxx.zip; cd bazel; ./compile.sh
+to start demo, how to compile by bazel
+https://docs.bazel.build/versions/master/tutorial/cpp.html
+
+5. cd tensorflow source
+./configure
+bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package --verbose_failures
+
+
+6. virutalenv local workdir
+
+export  PYTHONPATH=/usr/lib/python2.7/site-packages/:$PYTHONPATH

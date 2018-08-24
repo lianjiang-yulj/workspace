@@ -11,7 +11,7 @@ PS: install readline, textinfo before
 sudo yum install zlib-devel zlib -bcurrent
 sudo yum install openssl openssl-devel openssl-libs
 download python-2.7.15.source code
-python: ./configure --enable-shared --enable-static --enable-optimizations --enable-unicode=ucs4 --with-zlib
+python: ./configure --enable-shared --enable-static --enable-optimizations --enable-unicode=ucs4 --with-zlib --prefix=/usr; it will install in /usr/bin
 
 gcc:
 https://mirrors.ustc.edu.cn/gnu/gcc/
