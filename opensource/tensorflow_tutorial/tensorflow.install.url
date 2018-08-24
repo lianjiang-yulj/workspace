@@ -61,3 +61,13 @@ bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package --verb
 6. virutalenv local workdir
 
 export  PYTHONPATH=/usr/lib/python2.7/site-packages/:$PYTHONPATH
+virtualenv --system-site-packages targetDirectory
+
+7. install swig
+
+http://www.linuxfromscratch.org/blfs/view/svn/general/swig.html
+
+8. fix swig error when bazel build tensorflow
+https://github.com/bazelbuild/bazel/issues/5348
+
+see file: swig.error
