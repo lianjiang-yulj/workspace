@@ -53,21 +53,34 @@ unzip bazel-xxx.zip; cd bazel; ./compile.sh
 to start demo, how to compile by bazel
 https://docs.bazel.build/versions/master/tutorial/cpp.html
 
-5. cd tensorflow source
-./configure
-bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package --verbose_failures
+5. install swig
+
+http://www.linuxfromscratch.org/blfs/view/svn/general/swig.html
+
+6. fix swig error when bazel build tensorflow
+https://github.com/bazelbuild/bazel/issues/5348
+
+see file: swig.error
 
 
-6. virutalenv local workdir
+7. virutalenv local workdir
 
 export  PYTHONPATH=/usr/lib/python2.7/site-packages/:$PYTHONPATH
 virtualenv --system-site-packages targetDirectory
 
-7. install swig
 
-http://www.linuxfromscratch.org/blfs/view/svn/general/swig.html
+8. go into virtualenv local workdir, and cd tensorflow source
+./configure
+bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package --verbose_failures
+bazel-bin/tensorflow/tools/pip_package/build_pip_package ./tensorflow_pkg
+pip install ./tensorflow_pkg/tensorflow-1.10.0-cp27-cp27mu-linux_x86_64.whl
 
-8. fix swig error when bazel build tensorflow
-https://github.com/bazelbuild/bazel/issues/5348
 
-see file: swig.error
+
+
+
+
+
+other library:
+
+setuptools: https://pypi.org/project/setuptools/
