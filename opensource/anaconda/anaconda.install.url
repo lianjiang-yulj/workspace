@@ -15,8 +15,11 @@ see how to start it: https://conda.io/docs/user-guide/getting-started.html
 3. create
 conda create --name tf.conda
 
-4. list your environment
-conda info --envs
+4.1 list your environment
+conda info --envs/-e
+
+4.2 delete your environment
+conda remove -n ${environment_name} --all
 
 5. see bashrc in bash_env/, please check
 . /home/lianjiang.yulj/anaconda3/etc/profile.d/conda.sh
