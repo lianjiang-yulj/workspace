@@ -35,6 +35,19 @@ user:
 ./local/bin/easy_install-2.7 -U pip # update pip
 test: which pip; pip -V
 
+next install tensorflow by pip:
+
+pip install --upgrade tensorflow
+
+TEST IN PYTHON:
+
+# Python
+import tensorflow as tf
+hello = tf.constant('Hello, TensorFlow!')
+sess = tf.Session()
+print(sess.run(hello))
+
+
 4. source compile tensorflow
 
 a. install bazel
