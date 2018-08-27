@@ -22,3 +22,10 @@ Note that this same issue was raised in the TensorFlow projejct:
 tensorflow/tensorflow#14211 : https://github.com/tensorflow/tensorflow/issues/14211
 
 and deemed "not a bug", kicking the issue back in a very un-Google sort of way.
+
+
+
+pkg: pcre
+
+pcre-devel-8.32-15.1.alios7.x86_64
+pcre-8.32-15.1.alios7.x86_64
