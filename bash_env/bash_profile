@@ -12,14 +12,14 @@ PATH=$PATH:$HOME/.local/bin:$HOME/bin
 export PATH
 
 # User specific environment and startup programs
-export JAVA_HOME=/usr/java/jdk1.8.0_77
+export JAVA_HOME=/opt/taobao/install/ajdk-8.5.9_fp1-b2
 export WORK_HOME=/home/lianjiang.yulj/workspace.github
 export GCC_HOME=$WORK_HOME/cxx_standard_tools/gcc/
 export GDB_HOME=$WORK_HOME/cxx_standard_tools/gdb/
 export CLANG_ROOT=$WORK_HOME/cxx_standard_tools/clang/clang/
 
 export LD_LIBRARY_PATH=$GCC_HOME/lib64:$GDB_HOME/usr/lib:/usr/local/lib64:/usr/local/lib:$LD_LIBRARY_PATH
-export PATH=$GCC_HOME/bin:$GDB_HOME/usr/bin:$CLANG_ROOT/bin:/usr/local/bin:$PATH
+export PATH=$GCC_HOME/bin:$GDB_HOME/usr/bin:$CLANG_ROOT/bin:$JAVA_HOME/bin:/usr/local/bin:$PATH
 #export PYTHONPATH=/usr/lib/python2.7/site-packages/:/usr/lib64/python2.7/site-packages/:$PYTHONPATH
 
 export BAZEL_ROOT=$WORK_HOME/opensource/bazel_tutorial/bazel/

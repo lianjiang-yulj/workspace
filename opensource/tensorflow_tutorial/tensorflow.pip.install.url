@@ -11,6 +11,7 @@ you can install it through pip, not apt-get
 see bash_profile: export  PYTHONPATH=/usr/lib/python2.7/site-packages/:$PYTHONPATH
 sudo yum install zip zip-devel -bcurrent
 sudo yum install openssl openssl-devel openssl-libs
+sudo yum remove ali-jdk --nodeps; sudo yum install ajdk -bcurrent
 if error: no module : zlib, please recompile python and install it again
 https://pip.pypa.io/en/stable/
 
