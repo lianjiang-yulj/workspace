@@ -70,6 +70,8 @@ https://docs.bazel.build/versions/master/tutorial/cpp.html
 
 http://www.linuxfromscratch.org/blfs/view/svn/general/swig.html
 
+./configure --prefix=/usr  --without-clisp --without-maximum-compile-warnings
+
 6. fix swig error when bazel build tensorflow
 https://github.com/bazelbuild/bazel/issues/5348
 
