@@ -23,8 +23,25 @@ if test -z "$path"; then
 echo "rsync dir is empty, exit!"
 fi
 
+user=`whoami`
+
 for m in 10.97.184.58
 do
-    echo -e "NOTICE: \n begin to rsync \"$path\" to machine: \"$m\"\n"
-    #rsync -arv $path
+    msg="NOTICE: \n begin to rsync \"$path\" to machine: \"$m\"\n"
+    echo -e "$msg"
+    read -t 10 -p "---------- make sure?----------- [y/n] " answer
+    answer=y
+    case $answer in
+        Y|y)
+            cmd="/usr/bin/rsync -arv $path $user@$m:$HOME/"
+	    echo $cmd
+	    exec -c "$cmd"
+            #continue;;
+	    ;;
+	N|n)
+            echo "";;
+        *)
+            echo "";;
+    esac
+
 done
