@@ -1,4 +1,12 @@
 #!/bin/sh
+# step1
+#sudo yum install python python-devel python-libs zip zip-devel openssl openssl-devel openssl-libs git -bcurrent
+# step2
+# sh sync_workdir.sh
+# step3
+# install git-lfs from workspace.github/tools/git-lfs
+# step4
+# install readline textinfo from workspace.github/cxx_standard_tools/
 
 path=""
 for dir in .cache .conda .keras .linuxbrew .bash_profile .gitconfig .gdbinit .profile .gitignore .bashrc
@@ -35,7 +43,8 @@ do
         Y|y)
             cmd="/usr/bin/rsync -arv $path $user@$m:$HOME/"
 	    echo $cmd
-	    exec -c "$cmd"
+	    /usr/bin/rsync -arv $path $user@$m:$HOME/
+	    #exec -c "$cmd"
             #continue;;
 	    ;;
 	N|n)
