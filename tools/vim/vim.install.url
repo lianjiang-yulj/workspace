@@ -1,0 +1,7 @@
+sudo yum install ncurses  ncurses-libs ncurses-devel -bcurrent
+
+git clone https://github.com/vim/vim.git
+
+cd vim
+
+make -j8

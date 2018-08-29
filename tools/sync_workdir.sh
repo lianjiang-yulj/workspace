@@ -7,9 +7,11 @@
 # install git-lfs from workspace.github/tools/git-lfs
 # step4
 # install readline textinfo from workspace.github/cxx_standard_tools/
+# step5
+# sudo yum install ncurses  ncurses-libs ncurses-devel -bcurrent
 
 path=""
-for dir in .cache .conda .keras .linuxbrew .bash_profile .gitconfig .gdbinit .profile .gitignore .bashrc
+for dir in .cache .conda .keras .linuxbrew .bash_profile .gitconfig .gdbinit .profile .gitignore .bashrc .vimrc
 do
 if test -z "$path"; then
     path=$HOME/$dir 
