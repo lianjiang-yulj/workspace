@@ -1,4 +1,14 @@
-clang+llvm-3.6.0-x86_64-linux-gnu-ubuntu-14.04.tar
+http://clang.org/
+
+http://releases.llvm.org/download.html
+
+support: c++17
+http://releases.llvm.org/6.0.1/clang+llvm-6.0.1-x86_64-linux-gnu-ubuntu-16.04.tar.xz
+http://releases.llvm.org/6.0.0/clang+llvm-6.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz
+http://releases.llvm.org/5.0.2/clang+llvm-5.0.2-x86_64-linux-gnu-ubuntu-16.04.tar.xz
+
+xz -d *.xz // decompress
+xz -z *.tar // compress
 
 https://www.jb51.net/LINUXjishu/43356.html
 bunzip2 -d  xxx.tar.bz2 // xxx.tar.bz2->xxx.tar

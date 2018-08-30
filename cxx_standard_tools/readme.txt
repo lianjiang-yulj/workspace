@@ -1,6 +1,7 @@
 gdb:
+https://www.gnu.org/software/gdb/download/
 https://mirrors.ustc.edu.cn/gnu/gdb
-http://www.linuxfromscratch.org/blfs/view/svn/general/gdb.html
+compile: http://www.linuxfromscratch.org/blfs/view/svn/general/gdb.html
 
 # add option: --with-python, you can gdb the binary and print stl, support stl automatic
 ./configure --prefix=$HOME/gdb-xxx/usr --with-system-readline --without-guile --with-python
@@ -14,6 +15,7 @@ download python-2.7.15.source code
 python: ./configure --enable-shared --enable-static --enable-optimizations --enable-unicode=ucs4 --with-zlib --prefix=/usr; it will install in /usr/bin
 
 gcc:
+https://gcc.gnu.org/ -> https://gcc.gnu.org/releases.html -> https://gcc.gnu.org/mirrors.html -> https://mirrors.ustc.edu.cn/gnu/
 https://mirrors.ustc.edu.cn/gnu/gcc/
 https://gcc.gnu.org/wiki/InstallingGCC
 

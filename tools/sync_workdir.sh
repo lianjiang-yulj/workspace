@@ -43,9 +43,9 @@ do
     answer=y
     case $answer in
         Y|y)
-            cmd="/usr/bin/rsync -arv $path $user@$m:$HOME/"
+            cmd="/usr/bin/rsync -arv $path $user@$m:$HOME/ --delete-after"
 	    echo $cmd
-	    /usr/bin/rsync -arv $path $user@$m:$HOME/
+	    /usr/bin/rsync -arv $path $user@$m:$HOME/ --delete-after
 	    #exec -c "$cmd"
             #continue;;
 	    ;;
