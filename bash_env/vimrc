@@ -40,7 +40,8 @@ filetype plugin indent on    " required
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this lineset tags+=$HOME/workspace.github/tools/tags_dir/libstdcpp
+" Put your non-Plugin stuff after this lineset
+set tags+=$HOME/workspace.github/tools/tags_dir/libstdcpp
 set ts=4
 set expandtab
 set autoindent
