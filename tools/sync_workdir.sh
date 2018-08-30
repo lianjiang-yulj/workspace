@@ -10,32 +10,42 @@
 # step5
 # sudo yum install ncurses  ncurses-libs ncurses-devel -bcurrent
 
+
+if test $# -eq 0 ; then
+    echo -e "Usage:\n   sh $0 10.97.184.72 10.97.184.61\n   split by blank space\n"
+    exit 1;
+fi
+
+ms="$@"
+read -ra ADDR <<< "$ms";
+
 path=""
 for dir in .cache .conda .keras .linuxbrew .bash_profile .gitconfig .gdbinit .profile .gitignore .bashrc .vimrc .vim
 do
-if test -z "$path"; then
-    path=$HOME/$dir 
-else
-    path=$HOME/$dir" "$path 
-fi
+    if test -z "$path"; then
+        path=$HOME/$dir
+    else
+        path=$HOME/$dir" "$path
+    fi
 done
 
 for dir in `ls $HOME/`
 do
-if test -z "$path"; then
-    path=$HOME/$dir 
-else
-    path=$HOME/$dir" "$path 
-fi
+    if test -z "$path"; then
+        path=$HOME/$dir
+    else
+        path=$HOME/$dir" "$path
+    fi
 done
 
 if test -z "$path"; then
-echo "rsync dir is empty, exit!"
+    echo "rsync dir is empty, exit!"
+    exit 1;
 fi
 
 user=`whoami`
 
-for m in 10.97.184.65
+for m in "${ADDR[@]}";
 do
     msg="NOTICE: \n begin to rsync \"$path\" to machine: \"$m\"\n"
     echo -e "$msg"
@@ -44,12 +54,12 @@ do
     case $answer in
         Y|y)
             cmd="/usr/bin/rsync -arv $path $user@$m:$HOME/ --delete-after"
-	    echo $cmd
-	    #/usr/bin/rsync -arv $path $user@$m:$HOME/ --delete-after
-	    eval "$cmd"
+            echo $cmd
+            #/usr/bin/rsync -arv $path $user@$m:$HOME/ --delete-after
+            eval "$cmd"
             #continue;;
-	    ;;
-	N|n)
+            ;;
+        N|n)
             echo "";;
         *)
             echo "";;
