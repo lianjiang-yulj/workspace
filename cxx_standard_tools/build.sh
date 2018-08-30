@@ -1,1 +1,1 @@
-g++ -g -ggdb -o a c++14.cc -std=c++17
+g++ -g -ggdb -o a c++17.cc -std=c++17
