@@ -11,7 +11,7 @@
 # sudo yum install ncurses  ncurses-libs ncurses-devel -bcurrent
 
 path=""
-for dir in .cache .conda .keras .linuxbrew .bash_profile .gitconfig .gdbinit .profile .gitignore .bashrc .vimrc
+for dir in .cache .conda .keras .linuxbrew .bash_profile .gitconfig .gdbinit .profile .gitignore .bashrc .vimrc .vim
 do
 if test -z "$path"; then
     path=$HOME/$dir 
@@ -35,7 +35,7 @@ fi
 
 user=`whoami`
 
-for m in 10.97.184.58
+for m in 10.97.184.65
 do
     msg="NOTICE: \n begin to rsync \"$path\" to machine: \"$m\"\n"
     echo -e "$msg"
@@ -45,8 +45,8 @@ do
         Y|y)
             cmd="/usr/bin/rsync -arv $path $user@$m:$HOME/ --delete-after"
 	    echo $cmd
-	    /usr/bin/rsync -arv $path $user@$m:$HOME/ --delete-after
-	    #exec -c "$cmd"
+	    #/usr/bin/rsync -arv $path $user@$m:$HOME/ --delete-after
+	    eval "$cmd"
             #continue;;
 	    ;;
 	N|n)
