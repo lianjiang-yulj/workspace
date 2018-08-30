@@ -10,3 +10,5 @@ echo $cmd
 
 eval $cmd
 done
+
+ln -s $HOME/workspace.github/tools/vim/vim $HOME/.vim -f
