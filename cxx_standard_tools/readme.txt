@@ -13,6 +13,8 @@ mv gdb-8.1.1 gdb-8.1.1-source
 #export OBJCPLUS_INCLUDE_PATH=$LIBRARY_PATH:$CPLUS_INCLUDE_PATH:$OBJCPLUS_INCLUDE_PATH
 #export OBJC_INCLUDE_PATH=$OBJCPLUS_INCLUDE_PATH:$OBJC_INCLUDE_PATH
 "
+cp -r gcc-build-libs/{mpfr, mpc, isl, gmp} gcc-8.1.1-source/
+ln -s mpfr-xxx mpfr, .....
 ./configure --prefix=$HOME/workspace.github/cxx_standard_tools/gdb-8.1.1/usr --with-system-readline --with-python
 make -j8
 make -C gdb install
