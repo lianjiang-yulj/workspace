@@ -19,16 +19,20 @@ export GDB_HOME=$WORK_HOME/cxx_standard_tools/gdb/
 export CLANG_ROOT=$WORK_HOME/cxx_standard_tools/clang/clang/
 
 #找到动态库的路径
-export LD_LIBRARY_PATH=$GCC_HOME/lib64:$GCC_HOME/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:$GCC_HOME/lib/gcc/x86_64-pc-linux-gnu/8.1.0/plugin:$GDB_HOME/usr/lib:/usr/local/lib64:/usr/local/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$GCC_HOME/lib64:$GCC_HOME/lib/gcc/x86_64-pc-linux-gnu/8.2.0/:$GCC_HOME/lib/gcc/x86_64-pc-linux-gnu/8.2.0/plugin:$GDB_HOME/usr/lib:/usr/local/lib64:/usr/local/lib:$LD_LIBRARY_PATH
 #找到静态库的路径
 export LIBRARY_PATH=$LD_LIBRARY_PATH:$LIBRARY_PATH
 
-export CPLUS_INCLUDE_PATH=$GCC_HOME/include/c++/8.1.0:$GCC_HOME/include/c++/8.1.0/x86_64-pc-linux-gnu/:$CPLUS_INCLUDE_PATH
+#g++找到头文件的路径
+export CPLUS_INCLUDE_PATH=$GCC_HOME/include/c++/8.2.0:$GCC_HOME/include/c++/8.2.0/x86_64-pc-linux-gnu/:$CPLUS_INCLUDE_PATH
+#gcc找到头文件的路径
 export C_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$C_INCLUDE_PATH
+
+#for clang
 export OBJCPLUS_INCLUDE_PATH=$LIBRARY_PATH:$CPLUS_INCLUDE_PATH:$OBJCPLUS_INCLUDE_PATH
 export OBJC_INCLUDE_PATH=$OBJCPLUS_INCLUDE_PATH:$OBJC_INCLUDE_PATH
 
-export PATH=$GCC_HOME/bin:$GDB_HOME/usr/bin:$CLANG_ROOT/bin:$JAVA_HOME/bin:/usr/local/bin:$PATH
+export PATH=$GCC_HOME/bin:$GCC_HOME/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/:$GDB_HOME/usr/bin:$CLANG_ROOT/bin:$JAVA_HOME/bin:/usr/local/bin:$PATH
 #export PYTHONPATH=/usr/lib/python2.7/site-packages/:/usr/lib64/python2.7/site-packages/:$PYTHONPATH
 
 export BAZEL_ROOT=$WORK_HOME/opensource/bazel_tutorial/bazel/
@@ -81,6 +85,7 @@ alias dpull='sudo docker pull'
 alias dpush='sudo docker push'
 alias ha3_env='sudo docker exec -u lianjiang.yulj -it lianjiang.yulj.ha3 /bin/bash'
 alias dev_env='sudo docker exec -it lianjiang.yulj.env /bin/bash'
+alias con_out='conda deactivate'
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
