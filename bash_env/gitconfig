@@ -11,3 +11,11 @@
 	required = true
 [lfs "https://github.com/"]
 	locksverify = false
+[alias]
+        co = checkout
+        br = branch
+        ci = commit
+        st = status
+	glog = log --graph --pretty=oneline --abbrev-commit --color --decorate
+[color]
+        ui = true

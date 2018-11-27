@@ -12,7 +12,7 @@
 
 
 if test $# -eq 0 ; then
-    echo -e "Usage:\n   sh $0 10.97.184.72 10.97.184.61\n   split by blank space\n"
+    echo -e "Usage:\n   sh $0 11.165.228.116 11.165.228.117 11.164.101.225 11.164.101.228 11.164.101.208\n   split by blank space\n"
     exit 1;
 fi
 
