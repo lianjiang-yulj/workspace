@@ -13,4 +13,4 @@ fi
 # added by Anaconda3 installer
 . /home/lianjiang.yulj/anaconda3/etc/profile.d/conda.sh
 #export PATH="/home/lianjiang.yulj/anaconda3/bin:$PATH"
-conda activate
+conda activate gcc

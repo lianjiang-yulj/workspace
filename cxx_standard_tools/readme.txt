@@ -3,25 +3,25 @@ https://www.gnu.org/software/gdb/download/
 https://mirrors.ustc.edu.cn/gnu/gdb
 compile: http://www.linuxfromscratch.org/blfs/view/svn/general/gdb.html
 
-mv gdb-8.1.1 gdb-8.1.1-source
+mv gdb-8.2 gdb-8.2-source
 # add option: --with-python, you can gdb the binary and print stl, support stl automatic
 
 "
 #export LIBRARY_PATH=$LD_LIBRARY_PATH:$LIBRARY_PATH
-#export CPLUS_INCLUDE_PATH=$GCC_HOME/include/c++/8.1.0:$GCC_HOME/include/c++/8.1.0/x86_64-pc-linux-gnu/:$CPLUS_INCLUDE_PATH
+#export CPLUS_INCLUDE_PATH=$GCC_HOME/include/c++/8.2.0:$GCC_HOME/include/c++/8.2.0/x86_64-pc-linux-gnu/:$CPLUS_INCLUDE_PATH
 #export C_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$C_INCLUDE_PATH
 #export OBJCPLUS_INCLUDE_PATH=$LIBRARY_PATH:$CPLUS_INCLUDE_PATH:$OBJCPLUS_INCLUDE_PATH
 #export OBJC_INCLUDE_PATH=$OBJCPLUS_INCLUDE_PATH:$OBJC_INCLUDE_PATH
 "
-cp -r gcc-build-libs/{mpfr, mpc, isl, gmp} gcc-8.1.1-source/
+cp -r gcc-build-libs/{mpfr, mpc, isl, gmp} gcc-8.2.0-source/
 ln -s mpfr-xxx mpfr, .....
-./configure --prefix=$HOME/workspace.github/cxx_standard_tools/gdb-8.1.1/usr --with-system-readline --with-python
+./configure --prefix=$HOME/workspace.github/cxx_standard_tools/gdb-8.2.0/usr --with-system-readline --with-python
 make -j8
 make -C gdb install
 
 PS: install readline(https://tiswww.case.edu/php/chet/readline/rltop.html, http://ftp.gnu.org/gnu/readline/readline-7.0.tar.gz), texinfo(http://ftp.gnu.org/gnu/texinfo/texinfo-6.5.tar.xz) before
-sudo yum install zlib-devel zlib -bcurrent
-sudo yum install openssl openssl-devel openssl-libs
+sudo yum install zlib-devel zlib python-devel python python-libs glibc-debuginfo glibc-debuginfo-common -bcurrent #python-2.7.5 / python-2.7.15
+sudo yum install openssl openssl-devel openssl-libs automake -btest
 download python-2.7.15.source code
 python: ./configure --enable-shared --enable-static --enable-optimizations --enable-unicode=ucs4 --with-zlib --prefix=/usr; it will install in /usr/bin
 
@@ -32,14 +32,14 @@ https://gcc.gnu.org/wiki/InstallingGCC
 
 
 method1:
-tar xzf gcc-8.1.0.tar.xz
-cd gcc-8.1.0
+tar xzf gcc-8.2.0.tar.xz
+cd gcc-8.2.0
 ./contrib/download_prerequisites
 ps: mpfr, mpc, isl, gmp,  put them into the dir : objdir    isl:http://isl.gforge.inria.fr/
 cd ..
 mkdir objdir
 cd objdir
-$PWD/../configure --prefix=$HOME/gcc-8.1.0 --enable-languages=c,c++,go --disable-multilib
+$PWD/../configure --prefix=$HOME/gcc-8.2.0 --enable-languages=c,c++,go --disable-multilib
 make
 make install
 
@@ -67,7 +67,7 @@ $PWD/../configure --prefix=$HOME/workspace.github/cxx_standard_tools/gcc-8.2.0 -
 modify bash_profile
 "
 #export LIBRARY_PATH=$LD_LIBRARY_PATH:$LIBRARY_PATH
-#export CPLUS_INCLUDE_PATH=$GCC_HOME/include/c++/8.1.0:$GCC_HOME/include/c++/8.1.0/x86_64-pc-linux-gnu/:$CPLUS_INCLUDE_PATH
+#export CPLUS_INCLUDE_PATH=$GCC_HOME/include/c++/8.2.0:$GCC_HOME/include/c++/8.2.0/x86_64-pc-linux-gnu/:$CPLUS_INCLUDE_PATH
 #export C_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$C_INCLUDE_PATH
 #export OBJCPLUS_INCLUDE_PATH=$LIBRARY_PATH:$CPLUS_INCLUDE_PATH:$OBJCPLUS_INCLUDE_PATH
 #export OBJC_INCLUDE_PATH=$OBJCPLUS_INCLUDE_PATH:$OBJC_INCLUDE_PATH
@@ -102,13 +102,15 @@ Q: "Missing separate debuginfos, use: debuginfo-install glibc-2.17-222.alios7.1.
 A: you can run cmd: "debuginfo-install glibc-2.17-222.alios7.1.x86_64", but you can ignore this warnning, it doesn't matter 
  http://debuginfo.centos.org/7/x86_64/
 
+sudo debuginfo-install glibc-debuginfo glibc-debuginfo-common
+
 2. gdb aato-load safe-path
 
 Q:
 Starting program: /home/lianjiang.yulj/workspace.github/cxx_standard_tools/a
-warning: File "/home/lianjiang.yulj/workspace.github/cxx_standard_tools/gcc-8.1.0/lib64/libstdc++.so.6.0.25-gdb.py" auto-loading has been declined by your `auto-load safe-path' set to "$debugdir:$datadir/auto-load".
+warning: File "/home/lianjiang.yulj/workspace.github/cxx_standard_tools/gcc-8.2.0/lib64/libstdc++.so.6.0.25-gdb.py" auto-loading has been declined by your `auto-load safe-path' set to "$debugdir:$datadir/auto-load".
 To enable execution of this file add
-	add-auto-load-safe-path /home/lianjiang.yulj/workspace.github/cxx_standard_tools/gcc-8.1.0/lib64/libstdc++.so.6.0.25-gdb.py
+	add-auto-load-safe-path /home/lianjiang.yulj/workspace.github/cxx_standard_tools/gcc-8.2.0/lib64/libstdc++.so.6.0.25-gdb.py
 line to your configuration file "/home/lianjiang.yulj/.gdbinit".
 To completely disable this security protection add
 	set auto-load safe-path /
@@ -120,4 +122,4 @@ For more information about this security protection see the
 
 
 
-A: see /home/lianjiang.yulj/workspace.github/bash_env/gdbinit.gdb-8.1.0
+A: see /home/lianjiang.yulj/workspace.github/bash_env/gdbinit.gdb-8.2.0

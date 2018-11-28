@@ -12,10 +12,10 @@ PATH=$PATH:$HOME/.local/bin:$HOME/bin
 export PATH
 
 # User specific environment and startup programs
-export JAVA_HOME=/opt/taobao/install/ajdk-8.5.9_fp1-b2
+export JAVA_HOME=/opt/taobao/install/ajdk-8.4.8_fp0-b0
 export WORK_HOME=/home/lianjiang.yulj/workspace.github
 GCC_VERSION=8.2.0
-GDB_VERSION=8.1.1
+GDB_VERSION=8.2
 export GCC_HOME=$WORK_HOME/cxx_standard_tools/gcc-$GCC_VERSION/
 export GDB_HOME=$WORK_HOME/cxx_standard_tools/gdb-$GDB_VERSION/
 export CLANG_ROOT=$WORK_HOME/cxx_standard_tools/clang/clang/
