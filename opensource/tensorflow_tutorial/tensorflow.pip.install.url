@@ -1,3 +1,11 @@
+#############
+# environment version: python-3.6.7 bazel-0.18.1 tensorflow:r1.12 # see: https://github.com/tensorflow/tensorflow/issues/20517
+# conda install python = 3.6 protobuf
+# pip install keras_preprocessing(1.0.5) keras_applications(1.0.6) # see: https://github.com/keras-team/keras-contrib/issues/283 (to fix ModuleNotFoundError: No module named 'keras_applications')
+# use bazel:0.18(0.19.2 not work), (fix ares.h not found error) https://github.com/tensorflow/tensorflow/issues/23673
+# python 3.6 (fix const char* to char*)
+
+
 0. install tensorflow
 https://www.tensorflow.org/install/install_linux?hl=zh-cn
 
@@ -59,7 +67,7 @@ to
 Step 2: Download Bazel
 https://github.com/bazelbuild/bazel/releases
 to
-https://github.com/bazelbuild/bazel/releases/download/0.16.1/bazel-0.16.1-dist.zip
+https://github.com/bazelbuild/bazel/releases/download/0.16.1/bazel-0.18.1-dist.zip
 to
 install jdk8
 to
@@ -90,7 +98,7 @@ virtualenv --system-site-packages targetDirectory
 bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package --verbose_failures
 bazel-bin/tensorflow/tools/pip_package/build_pip_package ./tensorflow_pkg
 pip install ./tensorflow_pkg/tensorflow-1.10.0-cp27-cp27mu-linux_x86_64.whl
-
+pip show tensorflow
 
 
 

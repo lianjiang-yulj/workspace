@@ -13,7 +13,7 @@ mv gdb-8.2 gdb-8.2-source
 #export OBJCPLUS_INCLUDE_PATH=$LIBRARY_PATH:$CPLUS_INCLUDE_PATH:$OBJCPLUS_INCLUDE_PATH
 #export OBJC_INCLUDE_PATH=$OBJCPLUS_INCLUDE_PATH:$OBJC_INCLUDE_PATH
 "
-cp -r gcc-build-libs/{mpfr, mpc, isl, gmp} gcc-8.2.0-source/
+cp -r gcc-build-libs/{mpfr, mpc, isl, gmp} gdb-8.2-source/
 ln -s mpfr-xxx mpfr, .....
 ./configure --prefix=$HOME/workspace.github/cxx_standard_tools/gdb-8.2.0/usr --with-system-readline --with-python
 make -j8
