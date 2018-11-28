@@ -49,7 +49,7 @@ for m in "${ADDR[@]}";
 do
     msg="NOTICE: \n begin to rsync \"$path\" to machine: \"$m\"\n"
     echo -e "$msg"
-    read -t 10 -p "---------- make sure?----------- [y/n] " answer
+    #read -t 10 -p "---------- make sure?----------- [y/n] " answer
     answer=y
     case $answer in
         Y|y)
