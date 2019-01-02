@@ -2,7 +2,7 @@
 <project version="4">
   <component name="PublishConfigData" autoUpload="Always" promptOnRemoteOverwrite="CHECK_TIMESTAMP" notifyRemoteChanges="true">
     <serverData>
-      <paths name="10.97.184.58">
+      <paths name="ac208.sqa.eu95">
         <serverdata>
           <mappings>
             <mapping deploy="/Users/lianjiang.yulj/workspace/workspace.github/source/study.code/cxx_standard" local="$PROJECT_DIR$/../../source/study.code/cxx_standard" web="/" />
