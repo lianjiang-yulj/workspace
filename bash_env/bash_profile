@@ -19,6 +19,7 @@ GDB_VERSION=8.2
 export GCC_HOME=$WORK_HOME/cxx_standard_tools/gcc-$GCC_VERSION/
 export GDB_HOME=$WORK_HOME/cxx_standard_tools/gdb-$GDB_VERSION/
 export CLANG_ROOT=$WORK_HOME/cxx_standard_tools/clang/clang/
+export MAVEN_HOME=$HOME/apache-maven-3.6.0/
 
 #找到动态库的路径
 export LD_LIBRARY_PATH=$GCC_HOME/lib64:$GCC_HOME/lib/gcc/x86_64-pc-linux-gnu/$GCC_VERSION/:$GCC_HOME/lib/gcc/x86_64-pc-linux-gnu/$GCC_VERSION/plugin:$GDB_HOME/usr/lib:/usr/local/lib64:/usr/local/lib:$LD_LIBRARY_PATH
@@ -38,7 +39,7 @@ export PATH=$GCC_HOME/bin:$GCC_HOME/libexec/gcc/x86_64-pc-linux-gnu/$GCC_VERSION
 #export PYTHONPATH=/usr/lib/python2.7/site-packages/:/usr/lib64/python2.7/site-packages/:$PYTHONPATH
 
 export BAZEL_ROOT=$WORK_HOME/opensource/bazel_tutorial/bazel/
-export PATH=$BAZEL_ROOT/output/:$PATH
+export PATH=$BAZEL_ROOT/output/:$MAVEN_HOME/bin:$PATH
 
 #/usr/local/bin/keychain ~/.ssh/id_dsa > /dev/null
 #eval `/usr/local/bin/keychain --eval id_dsa`
