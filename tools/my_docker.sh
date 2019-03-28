@@ -1,6 +1,9 @@
 #!/bin/sh
 
 #sudo docker run -itd -v /etc/yum.repos.d:/etc/yum.repos.d -v /home/lianjiang.yulj/.ssh:/root/.ssh  -v /home/lianjiang.yulj/workspace:/home/lianjiang.yulj/workspace -v /etc/passwd:/etc/passwd --net=host  --cpuset-cpus="0-63"  reg.docker.alibaba-inc.com/isearch/ha3:3.3.1-rc3 /bin/bash
+
+#sudo docker exec -it 91871593a2a7 /bin/bash
+#sudo docker run -itd -v /etc/yum.repos.d:/etc/yum.repos.d -v /home/lianjiang.yulj/.ssh:/root/.ssh  -v /home/lianjiang.yulj/workspace:/home/lianjiang.yulj/workspace -v /etc/passwd:/etc/passwd --net=host  --cpuset-cpus="0-63"  reg.docker.alibaba-inc.com/isearch/ha3:3.3.1-rc3 /bin/bash
 image=reg.docker.alibaba-inc.com/hippo/hippo_alios7u2_base:1.5
 container_name=lianjiang.yulj
 work_dir=/home/lianjiang.yulj

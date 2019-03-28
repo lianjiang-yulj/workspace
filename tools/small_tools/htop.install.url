@@ -1,0 +1,19 @@
+http://hisham.hm/htop/releases/2.2.0/htop-2.2.0.tar.gz
+
+http://hisham.hm/htop/
+
+mac:
+brew  install htop
+
+linux:
+1. compile source
+https://www.gnu.org/software/ncurses/ncurses.html
+1.0 compile ncurses ./configure --with-shared --with-cxx-shared && make -j8
+anaconda环境中已经有了libncurses.so和libtinfow.so
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/anaconda3/lib
+
+
+2. yum install
+2.1 sudo yum install ncurses-devel ncurses-libs ncurses
+2.1 sudo yum install htop #
+使用aliyun的repo，可以下载2.2.0版本
