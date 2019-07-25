@@ -43,6 +43,8 @@ alias goto="/Users/lianjiang.yulj/Documents/lianjiang.yulj/软件下载/goto/got
 
 export JAVA_HOME=`/usr/libexec/java_home --version 1.8.0_181`
 export PATH=${JAVA_HOME}/bin:/usr/local/go/bin:$PATH
+export GOROOT=/usr/local/go
+export GOPATH=${HOME}/workspace/go
 # added by Anaconda3 2018.12 installer
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
