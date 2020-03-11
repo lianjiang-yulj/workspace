@@ -41,7 +41,7 @@ alias goto="/Users/lianjiang.yulj/Documents/lianjiang.yulj/软件下载/goto/got
 
 # java environment
 
-export JAVA_HOME=`/usr/libexec/java_home --version 1.8.0_221`
+export JAVA_HOME=`/usr/libexec/java_home --version 1.8.0_241`
 export PATH=${JAVA_HOME}/bin:/usr/local/bin:/usr/local/go/bin:$PATH
 export GOROOT=/usr/local/go
 export GOPATH=${HOME}/workspace/go
