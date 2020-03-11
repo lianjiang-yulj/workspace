@@ -1,5 +1,7 @@
 #/bin/sh
 
+conda init bash
+conda init zsh
 conda deactivate
 conda update conda
 conda update anaconda
