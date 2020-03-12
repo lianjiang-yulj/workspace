@@ -7,3 +7,7 @@
 see ../anaconda/anaconda.install.url
 
 2. install by pip like file: tensorflow.pip.install.url 
+
+3. 先安装anaconda，然后安装pip，python3.7
+#pip install tensorflow #官网安装会很慢，使用下面的镜像
+pip install --index-url http://mirrors.aliyun.com/pypi/simple/ tensorflow --trusted-host mirrors.aliyun.com
