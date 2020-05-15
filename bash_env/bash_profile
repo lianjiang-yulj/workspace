@@ -1,0 +1,94 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin
+
+export PATH
+
+# User specific environment and startup programs
+export JAVA_HOME=/opt/taobao/install/ajdk-8.4.8_fp0-b0
+export WORK_HOME=/home/lianjiang.yulj/workspace.github
+GCC_VERSION=8.2.0
+GDB_VERSION=8.2
+export GCC_HOME=$WORK_HOME/cxx_standard_tools/gcc-$GCC_VERSION/
+export GDB_HOME=$WORK_HOME/cxx_standard_tools/gdb-$GDB_VERSION/
+export CLANG_ROOT=$WORK_HOME/cxx_standard_tools/clang/clang/
+export MAVEN_HOME=$HOME/apache-maven-3.6.0/
+
+#找到动态库的路径
+export LD_LIBRARY_PATH=$GCC_HOME/lib64:$GCC_HOME/lib/gcc/x86_64-pc-linux-gnu/$GCC_VERSION/:$GCC_HOME/lib/gcc/x86_64-pc-linux-gnu/$GCC_VERSION/plugin:$GDB_HOME/usr/lib:/usr/local/lib64:/usr/local/lib:$LD_LIBRARY_PATH
+#找到静态库的路径
+export LIBRARY_PATH=$LD_LIBRARY_PATH:$LIBRARY_PATH
+
+#g++找到头文件的路径
+export CPLUS_INCLUDE_PATH=$GCC_HOME/include/c++/$GCC_VERSION:$GCC_HOME/include/c++/$GCC_VERSION/x86_64-pc-linux-gnu/:$CPLUS_INCLUDE_PATH
+#gcc找到头文件的路径
+export C_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$C_INCLUDE_PATH
+
+#for clang
+export OBJCPLUS_INCLUDE_PATH=$LIBRARY_PATH:$CPLUS_INCLUDE_PATH:$OBJCPLUS_INCLUDE_PATH
+export OBJC_INCLUDE_PATH=$OBJCPLUS_INCLUDE_PATH:$OBJC_INCLUDE_PATH
+
+export PATH=$GCC_HOME/bin:$GCC_HOME/libexec/gcc/x86_64-pc-linux-gnu/$GCC_VERSION/:$GDB_HOME/usr/bin:$CLANG_ROOT/bin:$JAVA_HOME/bin:/usr/local/bin:$PATH
+#export PYTHONPATH=/usr/lib/python2.7/site-packages/:/usr/lib64/python2.7/site-packages/:$PYTHONPATH
+
+export BAZEL_ROOT=$WORK_HOME/opensource/bazel_tutorial/bazel/
+export PATH=$BAZEL_ROOT/output/:$MAVEN_HOME/bin:$PATH
+
+#/usr/local/bin/keychain ~/.ssh/id_dsa > /dev/null
+#eval `/usr/local/bin/keychain --eval id_dsa`
+
+#for go environment
+if [ -f ~/.profile ]; then
+    . ~/.profile
+fi
+
+export LANG=en_US.UTF-8
+
+ulimit -c unlimited
+
+alias grep='grep --color=always'
+
+#read -t 10 -p "Display all agent_group? [y/N] " answer
+answer=y
+case $answer in 
+    Y|y) 
+
+        for i in my-offline-dev icbu-search-dev
+        do
+            #		echo "armorygroup ->>>> $i"
+            #		armory -g $i -l
+            continue
+        done ;;
+    N|n) 
+        echo "";; 
+    *) 
+        echo "";; 
+esac
+
+alias gm='git merge'
+alias gd='git diff'
+alias gb='git branch'
+alias gl='git lg'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gci='git commit'
+alias gco='git checkout'
+alias gclone='git clone --recursive'
+alias gpush='git push origin'
+alias gpull='git pull origin'
+alias dpull='sudo docker pull'
+alias dpush='sudo docker push'
+alias ha3_env='sudo docker exec -u lianjiang.yulj -it lianjiang.yulj.ha3 /bin/bash'
+alias dev_env='sudo docker exec -it lianjiang.yulj.env /bin/bash'
+alias con_out='conda deactivate'
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+

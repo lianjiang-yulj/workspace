@@ -1,0 +1,5 @@
+sudo yum install postfix
+
+sudo service postfix start
+
+https://blog.csdn.net/gyxuehu/article/details/78509141

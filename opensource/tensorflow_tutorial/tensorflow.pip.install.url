@@ -1,0 +1,110 @@
+#############
+# environment version: python-3.6.7 bazel-0.18.1 tensorflow:r1.12 # see: https://github.com/tensorflow/tensorflow/issues/20517
+# conda install python = 3.6 protobuf
+# pip install keras_preprocessing(1.0.5) keras_applications(1.0.6) # see: https://github.com/keras-team/keras-contrib/issues/283 (to fix ModuleNotFoundError: No module named 'keras_applications')
+# use bazel:0.18(0.19.2 not work), (fix ares.h not found error) https://github.com/tensorflow/tensorflow/issues/23673
+# python 3.6 (fix const char* to char*)
+
+
+0. install tensorflow
+https://www.tensorflow.org/install/install_linux?hl=zh-cn
+
+use virtualenv
+you can install it through pip, not apt-get
+
+----install pip
+1. install python2.7.15
+2. instlal pip
+#prepare environment, see .bash_profile, add it if not exists
+see bash_profile: export  PYTHONPATH=/usr/lib/python2.7/site-packages/:$PYTHONPATH
+sudo yum install zip zip-devel -bcurrent
+sudo yum install openssl openssl-devel openssl-libs
+sudo yum remove ali-jdk --nodeps; sudo yum install ajdk -bcurrent
+if error: no module : zlib, please recompile python and install it again
+https://pip.pypa.io/en/stable/
+
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+method1 user: python2.7 get-pip.py --user # isntall in /home/lianjiang.yulj/.local/bin
+method2 root: sudo python2.7 get-pip.py # install in /usr/local/bin or /usr/bin, decide by python.configure.--prefix
+
+
+3. install python virtualenv
+root:
+export  PYTHONPATH=/usr/lib/python2.7/site-packages/:$PYTHONPATH
+sudo pip install virtualenv setuptools wheel numpy
+
+user:
+export PYTHONPATH=""
+.local/bin/pip2.7  install virtualenv setuptools wheel numpy --user
+
+root:
+sudo easy_install-2.7 -U pip
+
+user:
+./local/bin/easy_install-2.7 -U pip # update pip
+test: which pip; pip -V
+
+next install tensorflow by pip:
+
+pip install --upgrade tensorflow
+
+TEST IN PYTHON:
+
+# Python
+import tensorflow as tf
+hello = tf.constant('Hello, TensorFlow!')
+sess = tf.Session()
+print(sess.run(hello))
+
+
+4. source compile tensorflow
+
+a. install bazel
+https://docs.bazel.build/versions/master/install.html
+to
+https://docs.bazel.build/versions/master/install-ubuntu.html
+to
+Step 2: Download Bazel
+https://github.com/bazelbuild/bazel/releases
+to
+https://github.com/bazelbuild/bazel/releases/download/0.16.1/bazel-0.18.1-dist.zip
+to
+install jdk8
+to
+unzip bazel-xxx.zip; cd bazel; ./compile.sh
+to start demo, how to compile by bazel
+https://docs.bazel.build/versions/master/tutorial/cpp.html
+
+5. install swig
+
+http://www.linuxfromscratch.org/blfs/view/svn/general/swig.html
+
+./configure --prefix=/usr  --without-clisp --without-maximum-compile-warnings
+
+6. fix swig error when bazel build tensorflow
+https://github.com/bazelbuild/bazel/issues/5348
+
+see file: swig.error
+
+
+7. virutalenv local workdir
+
+export  PYTHONPATH=/usr/lib/python2.7/site-packages/:$PYTHONPATH
+virtualenv --system-site-packages targetDirectory
+
+
+8. go into virtualenv local workdir, and cd tensorflow source
+./configure
+bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package --verbose_failures
+bazel-bin/tensorflow/tools/pip_package/build_pip_package ./tensorflow_pkg
+pip install ./tensorflow_pkg/tensorflow-1.10.0-cp27-cp27mu-linux_x86_64.whl
+pip show tensorflow
+
+
+
+
+
+
+other library:
+
+setuptools: https://pypi.org/project/setuptools/

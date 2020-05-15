@@ -1,0 +1,3 @@
+*.obj
+.ropeproject
+.DS_Store

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="cxx_standard" targetName="c++14" />
+      <config projectName="cxx_standard" targetName="base" />
+      <config projectName="cxx_standard" targetName="c++11" />
+      <config projectName="cxx_standard" targetName="c++17" />
+      <config projectName="cxx_standard" targetName="cxx_standard" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4f4c8bc8-3fda-485e-ac5b-df3ed91a2e93" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../bash_env/mac_bash_profile" beforeDir="false" afterPath="$PROJECT_DIR$/../../bash_env/mac_bash_profile" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1RlkrI3VXFSGm3eaSDwbBfJpYZn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager" selected="CMake Application.cxx_standard">
+    <configuration default="true" type="CLion_Remote" remoteCommand="tcp:11.164.101.208:1234" symbolFile="" sysroot="">
+      <method v="2" />
+    </configuration>
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cxx_standard" RUN_TARGET_NAME="c++17" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="base" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cxx_standard" TARGET_NAME="base" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="c++11" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cxx_standard" TARGET_NAME="c++11" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cxx_standard" RUN_TARGET_NAME="c++11">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="c++14" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cxx_standard" TARGET_NAME="c++14" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cxx_standard" RUN_TARGET_NAME="c++14">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="c++17" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cxx_standard" TARGET_NAME="c++17" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cxx_standard" RUN_TARGET_NAME="c++17">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cxx_standard" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cxx_standard" TARGET_NAME="cxx_standard" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cxx_standard" RUN_TARGET_NAME="cxx_standard">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.Build All" />
+      <item itemvalue="CMake Application.base" />
+      <item itemvalue="CMake Application.c++11" />
+      <item itemvalue="CMake Application.c++14" />
+      <item itemvalue="CMake Application.c++17" />
+      <item itemvalue="CMake Application.cxx_standard" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4f4c8bc8-3fda-485e-ac5b-df3ed91a2e93" name="Default Changelist" comment="" />
+      <created>1533112895019</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1533112895019</updated>
+      <workItem from="1533112896640" duration="393000" />
+      <workItem from="1533113368501" duration="4000" />
+      <workItem from="1533113737038" duration="10000" />
+      <workItem from="1533114553434" duration="41000" />
+      <workItem from="1533114949374" duration="1389000" />
+      <workItem from="1534834066699" duration="200000" />
+      <workItem from="1534834282148" duration="116000" />
+      <workItem from="1534834536739" duration="62000" />
+      <workItem from="1536119101278" duration="22000" />
+      <workItem from="1536119439113" duration="26000" />
+      <workItem from="1536119851406" duration="19000" />
+      <workItem from="1544098404543" duration="59000" />
+      <workItem from="1544098469198" duration="801000" />
+      <workItem from="1544099306520" duration="1691000" />
+      <workItem from="1546432175699" duration="1430000" />
+      <workItem from="1546434449231" duration="2581000" />
+      <workItem from="1551695758402" duration="59000" />
+      <workItem from="1553759020497" duration="1876000" />
+      <workItem from="1562767666601" duration="1171000" />
+      <workItem from="1562770040192" duration="658000" />
+      <workItem from="1562810909007" duration="1304000" />
+      <workItem from="1567490340362" duration="1000" />
+      <workItem from="1570249272021" duration="546000" />
+      <workItem from="1570769148698" duration="306000" />
+      <workItem from="1570803091269" duration="3000" />
+      <workItem from="1572533702575" duration="4000" />
+      <workItem from="1575010396371" duration="14000" />
+      <workItem from="1583910749510" duration="557000" />
+      <workItem from="1583911545252" duration="256000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="102" key="#Deployment" timestamp="1583911155048">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="320" y="102" key="#Deployment/0.23.1440.827/1440.23.1440.2537@0.23.1440.827" timestamp="1583911155048" />
+    <state x="221" y="75" key="SettingsEditor" timestamp="1583910795952">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="221" y="75" key="SettingsEditor/0.23.1440.827/1440.23.1440.2537@0.23.1440.827" timestamp="1583910795952" />
+    <state x="397" y="269" key="com.intellij.ide.util.TipDialog" timestamp="1583910750722">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="397" y="269" key="com.intellij.ide.util.TipDialog/0.23.1440.827/1440.23.1440.2537@0.23.1440.827" timestamp="1583910750722" />
+    <state x="436" y="177" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1583911538344">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="436" y="177" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.23.1440.829/1440.23.1440.2537@0.23.1440.829" timestamp="1583911538344" />
+  </component>
+</project>

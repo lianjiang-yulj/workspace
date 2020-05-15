@@ -1,0 +1,79 @@
+# my shell environment
+
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+# Set CLICOLOR if you want Ansi Colors in iTerm2 
+export CLICOLOR=1
+
+# Set colors to match iTerm2 Terminal Colors
+export TERM=xterm-256color
+
+LSCOLORS=gxfxcxdxegedabagacad
+export PS1='[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$'
+
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+alias gm='git merge'
+alias gd='git diff'
+alias gb='git branch'
+alias gl='git lg'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gci='git commit'
+alias gco='git checkout'
+alias gclone='git clone --recursive'
+alias gpush='git push origin'
+alias gpull='git pull origin'
+alias dpull='sudo docker pull'
+alias dpush='sudo docker push'
+alias ha3_env='sudo docker exec -u lianjiang.yulj -it lianjiang.yulj.ha3 /bin/bash'
+alias dev_env='sudo docker exec -it lianjiang.yulj.env /bin/bash'
+
+alias go_jump="go_jump_su18"
+alias go_jump_et2="ssh lianjiang.yulj@login1.et2.alibaba.org"
+alias go_jump_eu13="ssh lianjiang.yulj@login1.eu13.alibaba.org"
+alias go_jump_su18="ssh lianjiang.yulj@login1.su18.alibaba.org"
+alias go_dev="ssh lianjiang.yulj@10.97.184.58"
+alias goto="/Users/lianjiang.yulj/Documents/lianjiang.yulj/软件下载/goto/goto.sh"
+
+# java environment
+
+export JAVA_HOME=`/usr/libexec/java_home --version 1.8.0_241`
+export PATH=${JAVA_HOME}/bin:/usr/local/bin:/usr/local/go/bin:$PATH
+export GOROOT=/usr/local/go
+export GOPATH=${HOME}/workspace/go
+# added by Anaconda3 2018.12 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
+# added by Anaconda3 2019.07 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/lianjiang.yulj/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/Users/lianjiang.yulj/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/lianjiang.yulj/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/Users/lianjiang.yulj/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<

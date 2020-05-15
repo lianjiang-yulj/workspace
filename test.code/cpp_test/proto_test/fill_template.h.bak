@@ -1,0 +1,195 @@
+// Copyright (c) 2014 Alibaba Inc. All rights reserved.
+//
+// Author: lianjiang.yulj@taobao.com (Lianjiang Yu)
+//
+// fill template
+
+#ifndef CONTEXT_FILL_TEMPLATE_H_
+#define CONTEXT_FILL_TEMPLATE_H_
+
+#include <cstdlib>
+#include <string>
+
+#include "include/handler/handler_common.h"
+
+namespace interface_proto {
+
+class FillTemplate {
+ public:
+  explicit FillTemplate();
+  virtual ~FillTemplate();
+
+  template<class SearchInfo, class Doc>
+  static bool FillDocs(SearchInfo* si);
+
+  template<class SearchInfo, class QueryParam, class SubQueryParam>
+  static bool FillQueryParam(SearchInfo* si,
+                             const char* query_param_pb_field_name);
+
+  template<class SubQueryParam>
+  static bool FillKeyValue(SubQueryParam* sub_qp);
+
+  template<typename T>
+  static bool FillKeyValue(const google::protobuf::Reflection* ref,
+                           const google::protobuf::FieldDescriptor* fd,
+                           google::protobuf::Message* msg,
+                           T* value);
+ private:
+  DISALLOW_COPY_AND_ASSIGN(FillTemplate);
+};
+
+
+template<class SearchInfo, class Doc>
+bool FillTemplate::FillDocs(SearchInfo* si) {
+  // TODO lianjiang.yulj@taoao.com get from document
+  std::string inedex = "test";
+  google::protobuf::Message* message = si;
+  const google::protobuf::Descriptor *descriptor =
+      message->GetDescriptor();
+  const google::protobuf::Reflection *reflection =
+      message->GetReflection();
+  const google::protobuf::FieldDescriptor* field =
+      descriptor->FindFieldByName("docs");
+  // 判断字段类型是一个msg类型
+  if (NULL == field ||
+      field->type() != google::protobuf::FieldDescriptor::TYPE_MESSAGE ||
+      field->cpp_type() != google::protobuf::FieldDescriptor::CPPTYPE_MESSAGE ||
+      !field->is_repeated()) {
+    return false;
+  }
+
+  for (int32_t i = 0; i < 2; i++) {
+    google::protobuf::Message* mess = si->add_docs();
+    const google::protobuf::Descriptor *fd = mess->GetDescriptor();
+    const google::protobuf::Reflection *ref = mess->GetReflection();
+    for(int32_t idx = 0; idx < fd->field_count(); ++idx) {
+      const google::protobuf::FieldDescriptor* f = fd->field(idx);
+      FillKeyValue(ref, f, mess, index[i].c_str());
+      // printf("field value: %s\n", ref->GetString(*mess, f).c_str());
+    }
+  }
+
+  return true;
+}
+
+
+
+template<class SearchInfo, class QueryParam, class SubQueryParam>
+bool FillTemplate::FillQueryParam(SearchInfo* si, const char* query_param_pb_field_name) {
+  std::string index[10];
+  index[0] = "AAA";
+  index[1] = "BBB";
+  index[2] = "CCC";
+  google::protobuf::Message* message = si;
+  const google::protobuf::Descriptor *descriptor = message->GetDescriptor();
+  const google::protobuf::Reflection *reflection = message->GetReflection();
+  const google::protobuf::FieldDescriptor* field = descriptor->FindFieldByName("query");
+  // 判断字段类型是一个msg类型
+  if (NULL == field ||
+      field->type() != google::protobuf::FieldDescriptor::TYPE_MESSAGE ||
+      field->cpp_type() != google::protobuf::FieldDescriptor::CPPTYPE_MESSAGE ||
+      !field->is_optional()) {
+    printf("get field docs descriptor error.\n");
+    return false;
+  }
+
+  QueryParam* qp = si->mutable_query();
+  const google::protobuf::Descriptor *desc = qp->GetDescriptor();
+  const google::protobuf::Reflection *ref = qp->GetReflection();
+  const google::protobuf::FieldDescriptor* fd = desc->FindFieldByName(query_param_pb_field_name);
+  if (NULL == fd) {
+    printf("get field desc of docs error.\n");
+    return 0;
+  }
+
+  //google::protobuf::Message* mut = ref->MutableMessage(qp, fd);
+  SubQueryParam* mut = (SubQueryParam*)ref->MutableMessage(qp, fd);
+
+  bool ret = FillKeyValue(mut);
+  printf("debug: \n%s\n", si->DebugString().c_str());
+
+  return ret;
+}
+
+
+template<class SubQueryParam>
+bool FillTemplate::FillKeyValue(SubQueryParam* sub_qp) {
+  std::string index[10];
+  index[0] = "AAA";
+  index[1] = "BBB";
+  index[2] = "CCC";
+  google::protobuf::Message* message = sub_qp;
+  const google::protobuf::Descriptor *descriptor = message->GetDescriptor();
+  const google::protobuf::Reflection *reflection = message->GetReflection();
+  // 判断字段类型是一个msg类型
+  
+  for(int32_t idx = 0; idx < descriptor->field_count(); ++idx) {
+    const google::protobuf::FieldDescriptor* field = descriptor->field(idx);
+    if (NULL == field ||
+        field->type() != google::protobuf::FieldDescriptor::TYPE_BYTES||
+        field->cpp_type() != google::protobuf::FieldDescriptor::CPPTYPE_STRING ||
+        !field->is_optional()) {
+      printf("get field docs descriptor error.\n");
+      return false;
+    }
+
+    FillKeyValue(reflection, field, message, index[idx % 3].c_str());
+ //   reflection->SetString(message, field, index[idx % 3].c_str());
+  }
+  return true;
+
+}
+
+template<typename T>
+bool FillTemplate::FillKeyValue(const google::protobuf::Reflection* ref,
+                                const google::protobuf::FieldDescriptor* fd,
+                                google::protobuf::Message* msg,
+                                T* value) {
+  switch(fd->cpp_type()) {
+    case google::protobuf::FieldDescriptor::CPPTYPE_INT32: {
+      ref->SetInt32(msg, fd, ::strtol(value, NULL, 10));
+      break;
+    }
+    case google::protobuf::FieldDescriptor::CPPTYPE_UINT32: {
+      ref->SetUInt32(msg, fd, ::strtoul(value, NULL, 10));
+      break;
+    }
+    case google::protobuf::FieldDescriptor::CPPTYPE_INT64: {
+      ref->SetInt64(msg, fd, ::strtol(value, NULL, 10));
+      break;
+    }
+    case google::protobuf::FieldDescriptor::CPPTYPE_UINT64: {
+      ref->SetUInt64(msg, fd, ::strtoul(value, NULL, 10));
+      break;
+    }
+    case google::protobuf::FieldDescriptor::CPPTYPE_DOUBLE: {
+      ref->SetDouble(msg, fd, ::strtod(value, NULL));
+      break;
+    }
+    case google::protobuf::FieldDescriptor::CPPTYPE_FLOAT: {
+      ref->SetFloat(msg, fd, ::strtof(value, NULL));
+      break;
+    }
+    case google::protobuf::FieldDescriptor::CPPTYPE_STRING: {
+      ref->SetString(msg, fd, value);
+      break;
+    }
+    case google::protobuf::FieldDescriptor::CPPTYPE_BOOL: {
+      ref->SetBool(msg, fd, ::strtol(value, NULL, 10));
+      break;
+    }
+    case google::protobuf::FieldDescriptor::CPPTYPE_ENUM:
+    case google::protobuf::FieldDescriptor::CPPTYPE_MESSAGE:
+    default: {
+      // TODO lianjiang.yulj@taobao.com
+      return false;
+    }
+  }
+
+  return true;
+}
+
+}  // namespace interface_proto
+
+#endif  // CONTEXT_FILL_TEMPLATE_H_
+

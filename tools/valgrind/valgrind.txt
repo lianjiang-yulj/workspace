@@ -1,0 +1,15 @@
+1. brew edit valgrind
+And change the URL in head section
+
+https://sourceware.org/git/valgrind.git
+to
+
+git://sourceware.org/git/valgrind.git
+Solution from this post.
+
+2. Do an update for Homebrew:
+
+brew update
+3. Finally, use the following command to install Valgrind from the HEAD:
+
+brew install --HEAD valgrind

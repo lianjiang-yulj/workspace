@@ -1,0 +1,6 @@
+brew upgrade
+brew update
+
+
+https://brew.sh/index_zh-cn
+

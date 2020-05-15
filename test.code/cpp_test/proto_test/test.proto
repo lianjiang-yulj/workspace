@@ -1,0 +1,33 @@
+package pb;
+
+message ResultFormatCBanerPb
+{
+    message Meta {
+        optional int32  searched=1;
+        optional int32  returned=2;
+        optional int32  found=3;
+        optional int32  restrict=4;
+        optional int32  prevpage=5;  //0,1
+        optional int32  nextpage=6;  //0,1
+        optional int32  time=7;
+    };
+    
+    message  Doc {
+        optional bytes bid_adid = 1;
+
+        //optional string _id = 2;
+        //optional string subject_ = 3;
+        //optional string cust_Id = 4;
+        //optional string user_id = 5;
+       // optional string __loginid = 6;
+        //optional string _aliid_ = 7;
+        //optional string mediaUri__ = 8;
+    };
+    
+    
+    optional Meta meta = 1;
+    repeated Doc docs = 2;
+    optional int32 code = 3;
+    optional bytes msg = 4;
+    optional bytes msg2 = 5;
+}

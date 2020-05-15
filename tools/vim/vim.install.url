@@ -1,0 +1,17 @@
+1. install vim
+sudo yum install ncurses  ncurses-libs ncurses-devel -bcurrent
+
+git clone https://github.com/vim/vim.git
+
+cd vim
+
+make -j8
+
+2. install vimcdoc
+http://vimcdoc.sourceforge.net/
+
+3. install Vundle
+https://github.com/VundleVim/Vundle.vim
+
+
+
