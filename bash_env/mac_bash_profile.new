@@ -1,0 +1,34 @@
+alias dpull='sudo docker pull'
+alias dpush='sudo docker push'
+alias ha3_env='sudo docker exec -u lianjiang.yulj -it lianjiang.yulj.ha3 /bin/bash'
+alias dev_env='sudo docker exec -it lianjiang.yulj.env /bin/bash'
+
+alias go_jump="go_jump_et2"
+alias go_jump_et2="ssh lianjiang.yulj@login1.et2.alibaba.org"
+alias go_jump_eu13="ssh lianjiang.yulj@login1.eu13.alibaba.org"
+alias go_jump_su18="ssh lianjiang.yulj@login1.su18.alibaba.org"
+alias go_dev="ssh lianjiang.yulj@11.164.101.208"
+alias goto="${HOME}/workspace.github/tools/goto.sh"
+
+# java environment
+
+export JAVA_HOME=`/usr/libexec/java_home --version 1.8.0_251`
+export PATH=${JAVA_HOME}/bin:/usr/local/go/bin:$PATH
+export GOROOT=/usr/local/go
+export GOPATH=${HOME}/workspace/go
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
