@@ -10,6 +10,8 @@ alias go_jump_su18="ssh lianjiang.yulj@login1.su18.alibaba.org"
 alias go_dev="ssh lianjiang.yulj@11.164.101.208"
 alias goto="${HOME}/workspace.github/tools/goto.sh"
 
+#for mac: brew install coreutils
+alias readlink=/usr/local/bin/greadlink
 # java environment
 
 export JAVA_HOME=`/usr/libexec/java_home --version 1.8.0_251`

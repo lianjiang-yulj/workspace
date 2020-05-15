@@ -121,3 +121,5 @@ export PATH="/opt/anaconda3/bin:$PATH"
 . /opt/anaconda3/bin/activate && conda activate /opt/anaconda3; 
 
 setopt HIST_IGNORE_DUPS
+
+source .bash_profile
