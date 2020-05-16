@@ -10,6 +10,9 @@ https://www.anaconda.com/products/individual
 install 64-Bit Graphical Installer
 
 3. install python3.8 (graphical by mac app)
+3.1 install pynvim (command line)
+/Library/Frameworks/Python.framework/Versions/3.8/bin/pip3.8 install --upgrade pip
+/Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8  -m pip install pynvim
 
 4. install tmux (command line)
 https://www.cnblogs.com/kevingrace/p/6496899.html

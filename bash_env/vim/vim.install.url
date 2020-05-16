@@ -7,6 +7,7 @@ cd vim
 
 make -j8
 
+or mac: brew install vim
 2. install vimcdoc
 http://vimcdoc.sourceforge.net/
 

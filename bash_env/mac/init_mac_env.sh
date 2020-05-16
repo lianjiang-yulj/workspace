@@ -36,3 +36,11 @@ brew install htop
 brew install maven
 brew install coreutils
 brew install tree
+brew install npm
+#brew install node # 安装npm会安装node依赖
+brew install yarn
+
+
+# for install neovim
+/Library/Frameworks/Python.framework/Versions/3.8/bin/pip3.8 install --upgrade pip
+/Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8  -m pip install pynvim
