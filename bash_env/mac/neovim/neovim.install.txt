@@ -2,6 +2,8 @@
 1. brew install neovim
 touch ~/.config/nvim/init.vim
 2. 添加 let g:python3_host_prog = 'your/python/path'
+eg:
+let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8'
 
 3. ～/.zshrc
 alias vim='nvim'
@@ -16,9 +18,32 @@ https://github.com/neovim/neovim/wiki/Installing-Neovim
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 
-5. neovim -> :checkhealth (see : https://github.com/neovim/neovim/wiki/Following-HEAD#20181118)
-5. neovim -> :PluginStatus
+
+
+5. install python3.8 (graphical by mac app)
+5.1 install pynvim (command line)
+brew install npm
+#brew install node # 安装npm会安装node依赖
+brew install yarn
+
+
+# for install neovim
+/Library/Frameworks/Python.framework/Versions/3.8/bin/pip3.8 install --upgrade pip
+/Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8  -m pip install pynvim
 
 
 
 
+6. neovim -> :checkhealth (see : https://github.com/neovim/neovim/wiki/Following-HEAD#20181118)
+7. neovim -> :PluginStatus
+8. neovim -> :PluginInstall
+# 通过 shell command: nvim, :checkhealth 来检查错误
+
+9. npm install -g neovim
+
+
+10. 错误处理
+E576: Failed to parse ShaDa file: extra bytes in msgpack string at position 3 #3736
+https://github.com/neovim/neovim/issues/3469
+!!!!!!!!!!!!~/.local/share/nvim/shada/main.shada 不要删除
+A: delete ~/.viminfo, touch ~/.viminfo
