@@ -6,3 +6,26 @@
 [user]
 	name = lianjiang-yulj
 	email = lianjiang-yulj@users.noreply.github.com
+[lfs "https://github.com/"]
+	locksverify = false
+[alias]
+        co = checkout
+        br = branch
+        ci = commit
+        st = status
+	glog = log --graph --pretty=oneline --abbrev-commit --color --decorate
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset - %C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) <%an>%Creset' --abbrev-commit --all
+	lgd = log --color --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=iso --all
+	lga = log --color --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all
+[color]
+        ui = true
+[core]
+	excludesfile = /Users/lianjiang.yulj/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Users/lianjiang.yulj/Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/lianjiang.yulj/.stCommitMsg

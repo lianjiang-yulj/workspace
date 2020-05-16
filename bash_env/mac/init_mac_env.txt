@@ -1,0 +1,24 @@
+0. git use default by mac, not need to install
+
+1. install zsh+oh-my-zsh (command line)
+https://segmentfault.com/a/1190000013612471
+git@github.com:Michael728/my-config-files.git
+
+2. install anaconda3 (graphical by mac app)
+https://www.anaconda.com/products/individual
+
+install 64-Bit Graphical Installer
+
+3. install python3.8 (graphical by mac app)
+
+4. install tmux (command line)
+https://www.cnblogs.com/kevingrace/p/6496899.html
+
+
+5. install vscode (graphical by mac app)
+https://code.visualstudio.com/Download
+
+6. install sourcetree (graphical by mac app)
+https://www.sourcetreeapp.com/
+
+
