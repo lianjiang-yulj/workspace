@@ -8,6 +8,14 @@
 # do it in your git project, not global config
 
 #git config  core.filemode false
+#git config user.name 'lianjiang.yulj'
+#git config user.email 'lianjiang.yulj@alibaba-inc.com'
+#git-m
+
+#后面一个指令使用了 git-m 命令自动修改 log 信息,获得 git-m 方法：
+#remote:   Mac OS X :
+#remote:     curl  http://openbase.cn-hangzhou.oss.aliyun-inc.com/git-m -o /usr/local/bin/git-m
+#remote:     chmod 775  /usr/local/bin/git-m
 
 #2
 #https://blog.bbzhh.com/index.php/archives/141.html

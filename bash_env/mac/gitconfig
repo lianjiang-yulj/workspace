@@ -5,7 +5,7 @@
 	required = true
 [user]
 	name = lianjiang-yulj
-	email = lianjiang-yulj@users.noreply.github.com
+	email = lianjiang.yulj@users.noreply.github.com
 [lfs "https://github.com/"]
 	locksverify = false
 [alias]
@@ -23,9 +23,9 @@
 	excludesfile = /Users/lianjiang.yulj/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
-	cmd = /Users/lianjiang.yulj/Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
 	template = /Users/lianjiang.yulj/.stCommitMsg
