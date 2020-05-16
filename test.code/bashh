@@ -1,8 +1,0 @@
-#!/bin/bash
-if [ `uname -m | sed -e 's/i.86/32/'` -eq 32 ]
-then
-        echo 32
-else
-        echo 64
-fi
-exit 0
