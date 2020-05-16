@@ -21,4 +21,6 @@ do
 
 done
 
+sh $dir/neovim/config_link.sh
+
 #ln -s $HOME/workspace.github/bash_env/vim/vim $HOME/.vim -f

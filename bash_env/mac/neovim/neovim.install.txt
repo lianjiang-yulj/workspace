@@ -1,0 +1,22 @@
+https://www.jianshu.com/p/4c4cac1f2229
+
+1. brew install neovim
+touch ~/.config/nvim/init.vim
+2. 添加 let g:python3_host_prog = 'your/python/path'
+
+3. ～/.zshrc
+alias vim='nvim'
+alias vi='nvim'
+
+
+https://www.jianshu.com/p/c382222e5151
+https://github.com/junegunn/vim-plug
+
+https://github.com/neovim/neovim/wiki/Installing-Neovim
+
+
+
+4. curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+
