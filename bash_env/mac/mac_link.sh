@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 link_path=`greadlink -f $0`
 echo -e "bash $link_path \n"

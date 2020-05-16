@@ -28,3 +28,7 @@ scratch/
 
 #vscode 
 .vscode
+
+#cmake
+#
+cmake-build-debug

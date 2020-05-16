@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #please do some pre steps of init_mac_env.txt
 #after that, you can do these steps
