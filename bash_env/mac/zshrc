@@ -109,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 
 # cat
 alias cat="bat"
+alias ocat="bat -p"
 
 # nevim
 alias vim='nvim'

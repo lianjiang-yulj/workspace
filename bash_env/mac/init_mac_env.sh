@@ -27,3 +27,12 @@ brew install coreutils
 #https://zhuanlan.zhihu.com/p/98384704
 #https://www.cnblogs.com/kevingrace/p/6496899.html
 brew install tmux
+brew install wget
+brew install git-lfs
+brew install autojump
+brew install bat
+brew install neovim
+brew install htop
+brew install maven
+brew install coreutils
+brew install tree
