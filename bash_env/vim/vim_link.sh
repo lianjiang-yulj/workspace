@@ -1,13 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 
 link_path=`readlink -f $0`
 echo -e "bash $link_path \n"
 
 dir=`dirname $link_path`
-for f in bash_profile gitconfig gdbinit profile gitignore bashrc
+for f in vimrc vim
 
 do
-if [ -f $dir/$f ]; then
+if [ -e $dir/$f ]; then
 	#rmcmd="rm $HOME/.$f"
 	#echo $rmcmd
 	

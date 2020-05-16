@@ -32,3 +32,6 @@ scratch/
 #cmake
 #
 cmake-build-debug
+
+*.obj
+.ropeproject

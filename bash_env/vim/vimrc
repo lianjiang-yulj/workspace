@@ -114,7 +114,7 @@ set tabstop=4
 set vb t_vb=
 
 set background=light
-colorscheme desert
+colorscheme default
 "set t_Co=256
 
 set history=400  " vim记住的历史操作的数量，默认的是20

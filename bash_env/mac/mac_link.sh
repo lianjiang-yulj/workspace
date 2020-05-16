@@ -21,4 +21,4 @@ do
 
 done
 
-#ln -s $HOME/workspace.github/tools/vim/vim $HOME/.vim -f
+#ln -s $HOME/workspace.github/bash_env/vim/vim $HOME/.vim -f

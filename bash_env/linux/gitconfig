@@ -21,7 +21,7 @@
 [color]
         ui = true
 [core]
-	excludesfile = /Users/lianjiang.yulj/.gitignore_global
+	excludesfile = /home/lianjiang.yulj/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
