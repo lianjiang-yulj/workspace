@@ -114,9 +114,9 @@ alias cat="bat"
 alias ocat="bat -p"
 
 # nevim
-#alias vim='nvim'
-#alias vi='nvim'
-#alias vimdiff='nvim -d'
+alias vim='nvim'
+alias vi='nvim'
+alias vimdiff='nvim -d'
 
 
 # anaconda python3
