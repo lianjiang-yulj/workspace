@@ -91,7 +91,7 @@ set cursorline
 set magic           " 额，自己:h magic吧，一行很难解释
 set showmatch       " 显示匹配的括号
 set backup        " 关闭备份是set nobackup
-set backupdir=~/.vim/backup
+set backupdir=~/.backup
 set backupext=.bak
 "set patchmode=.orig
 set nowb
