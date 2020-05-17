@@ -4,7 +4,7 @@ link_path=`readlink -f $0`
 echo -e "bash $link_path \n"
 
 dir=`dirname $link_path`
-for f in bash_profile gitconfig gdbinit profile gitignore bashrc
+for f in bash_profile gitconfig gdbinit profile bashrc zshrc zshrc.pre-oh-my-zsh
 
 do
 if [ -f $dir/$f ]; then
@@ -19,4 +19,3 @@ if [ -f $dir/$f ]; then
 	fi
 done
 
-#ln -s $HOME/workspace.github/bash_env/vim/vim $HOME/.vim -f

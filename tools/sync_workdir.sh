@@ -20,7 +20,7 @@ ms="$@"
 read -ra ADDR <<< "$ms";
 
 path=""
-for dir in .cache .conda .keras .linuxbrew .bash_profile .gitconfig .gdbinit .profile .gitignore .bashrc .vimrc .vim
+for dir in .cache .conda .keras .linuxbrew .bash_profile .gitconfig .gdbinit .profile .gitignore_global .bashrc .vimrc .vim  .zshrc .zshrc.pre-oh-my-zsh .oh-my-zsh
 do
     if test -z "$path"; then
         path=$HOME/$dir

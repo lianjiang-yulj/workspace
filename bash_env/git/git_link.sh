@@ -4,7 +4,7 @@ link_path=`greadlink -f $0`
 echo -e "bash $link_path \n"
 
 dir=`dirname $link_path`
-for f in bash_profile gitconfig bashrc zshrc zshrc.pre-oh-my-zsh zprofile
+for f in gitignore_global
 
 do
 	if [ -f $dir/$f ]; then
@@ -21,6 +21,3 @@ do
 
 done
 
-sh $dir/neovim/config_link.sh
-
-#ln -s $HOME/workspace.github/bash_env/vim/vim $HOME/.vim -f

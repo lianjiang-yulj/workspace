@@ -5,6 +5,11 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
+# for anaconda3 environment
+#if [ -f ~/.zshrc.pre-oh-my-zsh ]; then
+#    . ~/.zshrc.pre-oh-my-zsh
+#fi
+
 # User specific environment and startup programs
 
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
@@ -60,10 +65,10 @@ answer=y
 case $answer in 
     Y|y) 
 
-        for i in my-offline-dev icbu-search-dev
+        for i in AC-DAILY-DEV
         do
-            #		echo "armorygroup ->>>> $i"
-            #		armory -g $i -l
+            echo "armorygroup ->>>> $i"
+            armory -g $i -l
             continue
         done ;;
     N|n) 
@@ -72,23 +77,8 @@ case $answer in
         echo "";; 
 esac
 
-alias gm='git merge'
-alias gd='git diff'
-alias gb='git branch'
-alias gl='git lg'
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit'
-alias gci='git commit'
-alias gco='git checkout'
-alias gclone='git clone --recursive'
-alias gpush='git push origin'
-alias gpull='git pull origin'
 alias dpull='sudo docker pull'
 alias dpush='sudo docker push'
 alias ha3_env='sudo docker exec -u lianjiang.yulj -it lianjiang.yulj.ha3 /bin/bash'
 alias dev_env='sudo docker exec -it lianjiang.yulj.env /bin/bash'
 alias con_out='conda deactivate'
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
