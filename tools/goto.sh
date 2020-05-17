@@ -131,12 +131,27 @@ select_machine() {
         11.229.113.196 # online gpu virtual machine
         11.179.217.65  # online cpu physical machine
     )
+
+    machines_info=(
+        jump
+        jump
+        jump
+        jump
+        dev.private
+        dev.private
+        dev.private
+        dev.share
+        dev.private
+        online_gpu_virtual_machine
+        online_cpu_physical_machine_admin_jump
+    )
+
     length=${#machines[@]}
 
     # 1. 根据应用名获取应用分组列表
     echo "machine list："
     for (( i = 0; i < $length; i++ )); do
-        echo $i". "${machines[i]}
+        echo $i".   "${machines[i]}" #------>>>>> "${machines_info[i]}
     done
 
     echo

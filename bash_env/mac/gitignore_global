@@ -37,6 +37,7 @@ cmake-build-debug
 .ropeproject
 
 # Ignore vim files
+/vim/*
 *~
 *.swp
 *.swo
