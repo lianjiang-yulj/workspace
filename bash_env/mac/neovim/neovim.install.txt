@@ -47,3 +47,8 @@ E576: Failed to parse ShaDa file: extra bytes in msgpack string at position 3 #3
 https://github.com/neovim/neovim/issues/3469
 !!!!!!!!!!!!~/.local/share/nvim/shada/main.shada 不要删除
 A: delete ~/.viminfo, touch ~/.viminfo
+B: 修改mac/neovim/config/nvim/init.vim
+set shada='50,<1000,s100,:0,n~/.local/share/nvim/shada/main.shada
+
+
+mkdir -p ~/.local/share/nvim/shada/
