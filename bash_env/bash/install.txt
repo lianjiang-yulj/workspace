@@ -1,0 +1,6 @@
+#for mac
+
+brew install bash #update bash
+
+alias bash='/usr/local/bin/bash'
+使用新bash来执行

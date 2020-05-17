@@ -31,13 +31,14 @@ scratch/
 
 #cmake
 #
-cmake-build-debug
+cmake-build-debug/
 
 *.obj
 .ropeproject
 
 # Ignore vim files
-/vim/*
+vim/
+vim
 *~
 *.swp
 *.swo

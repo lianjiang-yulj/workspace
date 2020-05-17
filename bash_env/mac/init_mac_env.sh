@@ -44,3 +44,5 @@ brew install yarn
 # for install neovim
 /Library/Frameworks/Python.framework/Versions/3.8/bin/pip3.8 install --upgrade pip
 /Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8  -m pip install pynvim
+
+brew install bash #update bash

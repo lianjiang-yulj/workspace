@@ -115,7 +115,7 @@ alias ocat="bat -p"
 alias vim='nvim'
 alias vi='nvim'
 alias vimdiff='nvim -d'
-
+alias bash='/usr/local/bin/bash'
 
 # anaconda python3
 export PATH="/opt/anaconda3/bin:$PATH"
