@@ -19,3 +19,4 @@ syntax enable
 " colorscheme solarized
 colorscheme default
 
+set shada='50,<1000,s100,:0,n~/.local/share/nvim/shada/main.shada

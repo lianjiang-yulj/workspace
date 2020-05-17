@@ -35,3 +35,13 @@ cmake-build-debug
 
 *.obj
 .ropeproject
+
+# Ignore vim files
+*~
+*.swp
+*.swo
+*.fuse_hidden*
+*.pxm
+*.DS_Store
+/video/*
+/screenshots/*
