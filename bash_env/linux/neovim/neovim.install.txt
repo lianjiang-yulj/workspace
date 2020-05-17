@@ -1,7 +1,9 @@
 0. https://neovim.io/doc/
 点击Install
 1. https://github.com/neovim/neovim/wiki/Installing-Neovim
-2. Linux
+2. install
+2.1
+Linux
 AppImage ("universal" Linux package)
 The Releases page provides an AppImage that runs on most Linux systems. No installation is needed, just download nvim.appimage and run it. (It might not work if your Linux distribution is more than 4 years old.)
 
@@ -11,19 +13,36 @@ The Releases page provides an AppImage that runs on most Linux systems. No insta
 
     如果curl比较慢，可以直接下载（Mac，浏览器点击url）：https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
     
+2.2 if error, 试试下面的方案
+use: failed to exec fusermount: No such file or directory
+
+Cannot mount AppImage, please check your FUSE setup.
+You might still be able to extract the contents of this AppImage
+if you run it with the --appimage-extract option.
+See https://github.com/AppImage/AppImageKit/wiki/FUSE
+for more information
+open dir error: No such file or directory
+
+
+see : https://github.com/neovim/neovim/releases/
+
+./nvim.appimage --appimage-extract
+
+sudo ln -s ~/workspace/squashfs-root/usr/bin/nvim /usr/local/bin/nvim
 
 
 
 
-1. brew install neovim
-touch ~/.config/nvim/init.vim
+1. 修改neovim 配置
+~/.config/nvim/init.vim (已经软连接 workspace.github/bash_env/linux/neovim/config)
 2. 添加 let g:python3_host_prog = 'your/python/path'
 eg:
-let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8'
+let g:python3_host_prog = '/home/lianjiang.yulj/anaconda3/bin/python3.7'
 
+注意：python3.7 需要先更新anaconda3，然后确认最新版本，这个地方再指定对应的版本
 3. ～/.zshrc
-alias vim='nvim'
-alias vi='nvim'
+#alias vim='nvim'
+#alias vi='nvim'
 
 
 https://github.com/junegunn/vim-plug
@@ -36,26 +55,36 @@ https://github.com/neovim/neovim/wiki/Installing-Neovim
 
 
 
-5. install python3.8 (graphical by mac app)
-5.1 install pynvim (command line)
-brew install npm
-#brew install node # 安装npm会安装node依赖
-brew install yarn
+5. install python3.7, linux直接安装anaconda3，直接取代python3
 
+conda update --prefix /home/lianjiang.yulj/anaconda3 anaconda
+
+conda update python
+conda install -c anaconda python
+conda update --all
+conda update -n base anaconda
+
+
+5.1 install pynvim (command line)
 
 # for install neovim
-/Library/Frameworks/Python.framework/Versions/3.8/bin/pip3.8 install --upgrade pip
-/Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8  -m pip install pynvim
+/home/lianjiang.yulj/anaconda3/bin/pip install --upgrade pip
+/home/lianjiang.yulj/anaconda3/bin/python3.7  -m pip install pynvim
 
 
+#install npm nodejs yarn
+conda install -c anaconda nodejs
+/home/lianjiang.yulj/anaconda3/bin/npm install -g yarn
 
+#gem install neovim
+#gem environment
 
 6. neovim -> :checkhealth (see : https://github.com/neovim/neovim/wiki/Following-HEAD#20181118)
 7. neovim -> :PluginStatus
 8. neovim -> :PluginInstall
 # 通过 shell command: nvim, :checkhealth 来检查错误
 
-9. npm install -g neovim
+9. /home/lianjiang.yulj/anaconda3/bin/npm install -g neovim
 
 
 10. 错误处理
