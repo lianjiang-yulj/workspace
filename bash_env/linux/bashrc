@@ -1,8 +1,10 @@
 # .bashrc
 
 # Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+if [ "${SHELL}" != "/bin/zsh" ]; then
+    if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+    fi
 fi
 
 # >>> conda initialize >>>
