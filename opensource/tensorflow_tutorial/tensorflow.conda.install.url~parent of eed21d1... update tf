@@ -1,9 +1,0 @@
-在 Anaconda 中，您可以使用 conda 来创建一个虚拟环境。但是，在 Anaconda 内部，我们建议使用 pip install 命令来安装 TensorFlow，而不要使用 conda install 命令。
-
-注意：conda 软件包是由社区提供支持的，并没有任何官方支持。也就是说，TensorFlow 团队既不测试也不维护 conda 软件包。若使用该软件包，您需要自行承担相关风险。
-
-
-1. install anaconda
-see ../anaconda/anaconda.install.url
-
-2. install by pip like file: tensorflow.pip.install.url 
