@@ -6,4 +6,6 @@ echo -e "bash $link_path \n"
 dir=`dirname $link_path`
 cmd="ln -s $dir/config $HOME/.config"
 
+echo $cmd
+
 eval $cmd

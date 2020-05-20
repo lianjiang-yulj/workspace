@@ -1,0 +1,14 @@
+sudo find . -type d -name "CLion*"
+
+
+./Library/Application Support/JetBrains
+./Library/Logs/JetBrains
+./Library/Caches/JetBrains
+./Applications/JetBrains Toolbox
+~/Library/ApplicationSupport/JetBrains/Toolbox/logs
+~/Library/Application\ Support/JetBrains/Toolbox/logs/
+
+./Library/Application Support/JetBrains/Toolbox/apps/CLion
+./Library/Application Support/JetBrains/CLion2020.1
+./Library/Logs/JetBrains/CLion2020.1
+./Library/Caches/JetBrains/CLion2020.1
