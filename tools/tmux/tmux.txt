@@ -1,0 +1,9 @@
+linux: sudo yum install tmux
+mac: brew install tmux
+
+tmux new -s ac
+tmux ls
+tmux attach-session -t ac
+tmux detach
+Ctr+D 退出/失效
+
