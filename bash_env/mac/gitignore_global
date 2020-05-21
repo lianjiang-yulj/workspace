@@ -47,3 +47,8 @@ vim
 *.DS_Store
 /video/*
 /screenshots/*
+
+
+# Ignore my workspace.github tools
+#
+cxx_standard_tools

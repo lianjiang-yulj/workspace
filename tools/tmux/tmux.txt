@@ -1,3 +1,4 @@
+
 linux: sudo yum install tmux
 mac: brew install tmux
 
@@ -6,4 +7,16 @@ tmux ls
 tmux attach-session -t ac
 tmux detach
 Ctr+D 退出/失效
+
+
+
+
+方式2:
+
+iterm2集成了tmux
+
+https://www.jianshu.com/p/f2e585453196
+
+tmux -CC
+tmux -CC attach
 
