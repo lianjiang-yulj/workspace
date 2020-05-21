@@ -8,7 +8,7 @@ cat /etc/shells
 将zsh设置为默认shell
 # Mac如下
 # 在 /etc/shells 文件中加入如下一行
-#chsh -s /usr/local/bin/zsh
+#chsh -s /usr/bin/zsh
 #可以通过echo $SHELL查看当前默认的shell，如果没有改为/bin/zsh，那么需要重启shell。
 
 3. oh-my-zsh

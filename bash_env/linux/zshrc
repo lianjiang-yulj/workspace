@@ -127,3 +127,5 @@ export PATH="/home/lianjiang.yulj/anaconda3/bin:$PATH"
 setopt HIST_IGNORE_DUPS
 
 source ~/.bash_profile
+
+chsh -s /bin/zsh
