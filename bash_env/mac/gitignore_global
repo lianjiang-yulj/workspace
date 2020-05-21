@@ -28,6 +28,7 @@ scratch/
 
 #vscode 
 .vscode
+*.dSYM
 
 #cmake
 #

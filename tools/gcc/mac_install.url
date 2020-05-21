@@ -1,0 +1,5 @@
+brew info gcc
+brew install gcc
+
+brew info cmake
+brew install cmake
