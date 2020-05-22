@@ -117,6 +117,16 @@ alias vi='nvim'
 alias vimdiff='nvim -d'
 alias bash='/usr/local/bin/bash'
 
+# gcc
+alias ldd='otool -L'
+alias g++='/usr/local/bin/g++-9'
+alias gcc='/usr/local/bin/gcc-9'
+#alias make='/usr/local/bin/gmake'
+#alias gdb='/usr/local/bin/gdb'
+
+# add gmake path
+PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+
 # anaconda python3
 export PATH="/opt/anaconda3/bin:$PATH"
 

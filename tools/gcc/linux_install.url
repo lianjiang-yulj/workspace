@@ -1,0 +1,11 @@
+brew info gcc
+brew install gcc
+
+brew info cmake
+brew install cmake
+
+
+# install in here
+.linuxbrew/bin/g++
+
+#需要加入PATH
