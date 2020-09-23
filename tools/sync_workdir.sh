@@ -20,17 +20,24 @@ ms="$@"
 read -ra ADDR <<< "$ms";
 
 path=""
-for dir in .cache .conda .keras .linuxbrew .bash_profile .gitconfig .gdbinit .profile .gitignore_global .bashrc .vimrc .vim  .zshrc .zshrc.pre-oh-my-zsh .oh-my-zsh
-do
-    if test -z "$path"; then
-        path=$HOME/$dir
-    else
-        path=$HOME/$dir" "$path
-    fi
-done
+#for dir in .backup .cache .conda .keras .config .cpan .linuxbrew .local .npm .pki .bash_profile .gitconfig .gdbinit .profile .gitignore_global .bashrc .vimrc .vim  .zshrc .oh-my-zsh .viminfo 
+#do
+#    if test -z "$path"; then
+#        path=$HOME/$dir
+#    else
+#        path=$HOME/$dir" "$path
+#    fi
+#done
 
-for dir in `ls $HOME/`
+for dir in `ls $HOME/ -a`
 do
+    if [ "$dir" == "." -o "$dir" == ".." ]; then
+
+        echo $dir"TTT"
+        continue;
+    fi
+
+
     if test -z "$path"; then
         path=$HOME/$dir
     else
@@ -42,6 +49,8 @@ if test -z "$path"; then
     echo "rsync dir is empty, exit!"
     exit 1;
 fi
+
+echo $path
 
 user=`whoami`
 
@@ -56,6 +65,9 @@ do
             cmd="/usr/bin/rsync -arv $path $user@$m:$HOME/ --delete-after"
             echo $cmd
             #/usr/bin/rsync -arv $path $user@$m:$HOME/ --delete-after
+            eval "$cmd"
+            cmd="/usr/bin/rsync -arv /opt/anaconda3 $user@$m:/opt/ --delete-after"
+            echo $cmd
             eval "$cmd"
             #continue;;
             ;;
