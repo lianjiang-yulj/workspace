@@ -1,12 +1,11 @@
 brew info gcc
 brew install gcc
 
-brew info cmake
-brew install cmake
-
-
-brew info make
-brew install make
+#make cmake gmake install by sudo yum install cmake make -bcurrent
+#brew info cmake
+#brew install cmake
+#brew info make
+#brew install make
 
 brew info gdb
 brew install gdb
