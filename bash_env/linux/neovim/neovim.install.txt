@@ -23,6 +23,9 @@ See https://github.com/AppImage/AppImageKit/wiki/FUSE
 for more information
 open dir error: No such file or directory
 
+you can run command:
+1. sudo yum install fuse -bcurrent
+2. retry: ./nvim.appimage
 
 see : https://github.com/neovim/neovim/releases/
 
