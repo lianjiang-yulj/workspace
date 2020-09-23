@@ -7,8 +7,8 @@ alias g++='/usr/local/bin/g++-9'
 alias gcc='/usr/local/bin/gcc-9'
 
 #alias make='/usr/local/bin/gmake'
-#alias gdb='/usr/local/bin/gdb'
-#alias cmake='/usr/local/bin/cmake'
+alias gdb='/usr/local/bin/gdb'
+alias cmake='/usr/local/bin/cmake'
 
 brew info cmake
 brew install cmake
@@ -20,3 +20,22 @@ PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 
 brew info gdb
 brew install gdb
+
+
+mac 下gdb调试报错：
+Unable to find Mach task port for process-id 28885: (os/kern) failure (0x5).
+ (please check gdb is codesigned - see taskgated(8))
+
+解决办法：
+https://segmentfault.com/q/1010000004136334
+https://sourceware.org/gdb/wiki/PermissionsDarwin
+
+1. 创建证书
+https://blog.csdn.net/LU_ZHAO/article/details/104803399
+
+2. 添加 ~/.gdbinit 文件
+echo "set startup-with-shell off" >> ~/.gdbinit
+
+3. 参见1.3
+https://sourceware.org/gdb/wiki/PermissionsDarwin
+

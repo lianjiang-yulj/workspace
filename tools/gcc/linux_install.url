@@ -5,6 +5,13 @@ brew info cmake
 brew install cmake
 
 
+brew info make
+brew install make
+
+brew info gdb
+brew install gdb
+
+
 # install in here
 .linuxbrew/bin/g++
 

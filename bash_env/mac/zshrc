@@ -124,7 +124,8 @@ alias ldd='otool -L'
 alias g++='/usr/local/bin/g++-10'
 alias gcc='/usr/local/bin/gcc-10'
 #alias make='/usr/local/bin/gmake'
-#alias gdb='/usr/local/bin/gdb'
+alias gdb='/usr/local/bin/gdb'
+alias cmake='/usr/local/bin/cmake'
 
 # add gmake path
 PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
