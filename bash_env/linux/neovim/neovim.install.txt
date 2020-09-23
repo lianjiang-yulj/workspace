@@ -37,9 +37,9 @@ sudo ln -s ~/workspace/squashfs-root/usr/bin/nvim /usr/local/bin/nvim
 ~/.config/nvim/init.vim (已经软连接 workspace.github/bash_env/linux/neovim/config)
 2. 添加 let g:python3_host_prog = 'your/python/path'
 eg:
-let g:python3_host_prog = '/home/lianjiang.yulj/anaconda3/bin/python3.7'
+let g:python3_host_prog = '/opt/anaconda3/bin/python3.8'
 
-注意：python3.7 需要先更新anaconda3，然后确认最新版本，这个地方再指定对应的版本
+注意：python3.8 需要先更新anaconda3，然后确认最新版本，这个地方再指定对应的版本
 3. ～/.zshrc
 #alias vim='nvim'
 #alias vi='nvim'
@@ -55,9 +55,10 @@ https://github.com/neovim/neovim/wiki/Installing-Neovim
 
 
 
-5. install python3.7, linux直接安装anaconda3，直接取代python3
+5. install python3.8, linux直接安装anaconda3，直接取代python3
 
-conda update --prefix /home/lianjiang.yulj/anaconda3 anaconda
+#更新conda , see tools/update_local_mac.sh
+conda update --prefix /opt/anaconda3 anaconda
 
 conda update python
 conda install -c anaconda python
@@ -68,13 +69,18 @@ conda update -n base anaconda
 5.1 install pynvim (command line)
 
 # for install neovim
-/home/lianjiang.yulj/anaconda3/bin/pip install --upgrade pip
-/home/lianjiang.yulj/anaconda3/bin/python3.7  -m pip install pynvim
+/opt/anaconda3/bin/pip install --upgrade pip
+/opt/anaconda3/bin/python3.8  -m pip install pynvim
 
 
 #install npm nodejs yarn
 conda install -c anaconda nodejs
-/home/lianjiang.yulj/anaconda3/bin/npm install -g yarn
+conda install nodejs
+conda install ruby
+
+conda activate base
+/opt/anaconda3/bin/npm install -g yarn
+/opt/anaconda3/bin/npm install -g neovim
 
 #gem install neovim
 #gem environment
@@ -84,7 +90,7 @@ conda install -c anaconda nodejs
 8. neovim -> :PluginInstall
 # 通过 shell command: nvim, :checkhealth 来检查错误
 
-9. /home/lianjiang.yulj/anaconda3/bin/npm install -g neovim
+9. /opt/anaconda3/bin/npm install -g neovim
 
 
 10. 错误处理

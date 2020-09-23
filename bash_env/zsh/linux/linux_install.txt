@@ -23,7 +23,8 @@ eg: wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.
 #   sh install.sh
 
 3.2 updat oh my zsh
-upgrade_oh_my_zsh
+#upgrade_oh_my_zsh
+omz update
 
 4. zsh主题
 通过如下命令可以查看可用的Theme：
@@ -49,6 +50,7 @@ plugins=(
 
 5.1 git 默认，不需要安装
 5.2 sudo yum install autojump-zsh autojump # linux
+#如果找不到，尝试安装url：sudo yum install http://yum.corp.taobao.com/opsx-inc/7/noarch/autojump-fish/autojump-fish-22.3.0-3.alios7.noarch.rpm http://yum.corp.taobao.com/opsx-inc/7/noarch/autojump/autojump-22.3.0-3.alios7.noarch.rpm http://yum.corp.taobao.com/opsx-inc/7/noarch/autojump-zsh/autojump-zsh-22.3.0-3.alios7.noarch.rpm
 CentOS安装好之后，需要在~/.zshrc中配置一下，
 在 ~/.zshrc 中配置plugins=(其他的插件 autojump)
 rpm -ql autojump-zsh autojump
@@ -88,15 +90,16 @@ alias ocat="bat -p"
 
 
 # anaconda python3
-export PATH="/home/lianjiang.yulj/anaconda3/bin:$PATH"
+export PATH="/opt/anaconda3/bin:$PATH"
 
-. /home/lianjiang.yulj/anaconda3/bin/activate && conda activate //home/lianjiang.yulj/anaconda3;
+. /opt/anaconda3/bin/activate && conda activate /opt/anaconda3;
 
 setopt HIST_IGNORE_DUPS
 
 source ~/.bash_profile
 
-
+conda init zsh
+conda init bash
 
 
 

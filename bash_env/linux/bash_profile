@@ -17,7 +17,7 @@ PATH=$PATH:$HOME/.local/bin:$HOME/bin
 export PATH
 
 # User specific environment and startup programs
-export JAVA_HOME=/opt/taobao/install/ajdk-8.4.8_fp0-b0
+export JAVA_HOME=/opt/taobao/install/ajdk/
 export WORK_HOME=/home/lianjiang.yulj/workspace.github
 GCC_VERSION=8.2.0
 GDB_VERSION=8.2

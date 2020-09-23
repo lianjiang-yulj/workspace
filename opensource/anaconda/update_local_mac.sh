@@ -1,0 +1,1 @@
+../../tools/update_local_mac.sh

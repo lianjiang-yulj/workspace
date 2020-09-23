@@ -4,7 +4,7 @@ link_path=`readlink -f $0`
 echo -e "bash $link_path \n"
 
 dir=`dirname $link_path`
-for f in bash_profile gitconfig gdbinit profile bashrc zshrc zshrc.pre-oh-my-zsh
+for f in bash_profile gitconfig gdbinit profile bashrc zshrc
 
 do
 if [ -f $dir/$f ]; then

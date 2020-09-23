@@ -43,3 +43,8 @@ conda update conda
 
 # 更新所有库
 conda update --all
+
+
+
+conda init zsh
+conda init bash

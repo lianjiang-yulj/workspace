@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sudo yum install ali-jdk git git-config -btest
+sudo yum install ajdk git git-config -bcurrent
 

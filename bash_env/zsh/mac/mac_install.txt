@@ -86,6 +86,8 @@ setopt HIST_IGNORE_DUPS
 
 source ~/.bash_profile
 
+conda init zsh
+conda init bash
 
 
 

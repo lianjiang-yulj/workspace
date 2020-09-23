@@ -10,6 +10,8 @@ git config lfs.cachecredentials true
 
 A. FOR LINUX
 1. download linux git-lfs
+https://packagecloud.io/github/git-lfs
+
 wget --content-disposition https://packagecloud.io/github/git-lfs/packages/el/7/git-lfs-2.6.0-1.el7.x86_64.rpm/download.rpm
 wget --content-disposition https://packagecloud.io/github/git-lfs/packages/el/7/git-lfs-2.5.1-1.el7.x86_64.rpm/download.rpm
 2. unzip
