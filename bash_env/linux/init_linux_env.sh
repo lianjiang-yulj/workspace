@@ -21,7 +21,7 @@ sudo yum install openssl openssl-devel openssl-libs automake -bcurrent
 
 sudo yum install tmux -bcurrent
 
-sudo yum install clang llvm -bcurrent
+sudo yum install clang llvm make cmake -bcurrent
 sudo yum install perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker -bcurrent
 
 #~/.linuxbrew/bin/brew install bat htop
