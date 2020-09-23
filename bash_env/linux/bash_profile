@@ -82,3 +82,4 @@ alias dpush='sudo docker push'
 alias ha3_env='sudo docker exec -u lianjiang.yulj -it lianjiang.yulj.ha3 /bin/bash'
 alias dev_env='sudo docker exec -it lianjiang.yulj.env /bin/bash'
 alias con_out='conda deactivate'
+eval $(/home/lianjiang.yulj/.linuxbrew/bin/brew shellenv)

@@ -2,5 +2,5 @@ export GOROOT=$WORK_HOME/opensource/go/usr/local/go
 export PATH=$GOROOT/bin:$PATH
 
 export PATH=$PATH:$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin
-export MANPATH=/home/linuxbrew/.linuxbrew/share/man:$MANPATH
-export INFOPATH=/home/linuxbrew/.linuxbrew/share/info:$INFOPATH
+export MANPATH=$HOME/.linuxbrew/share/man:$MANPATH
+export INFOPATH=$HOME/.linuxbrew/share/info:$INFOPATH
