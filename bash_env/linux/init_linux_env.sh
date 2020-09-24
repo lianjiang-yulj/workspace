@@ -24,5 +24,8 @@ sudo yum install tmux -bcurrent
 sudo yum install clang llvm make cmake -bcurrent
 sudo yum install perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker -bcurrent
 
+#for nvim
+sudo yum install fuse -bcurrent
+
 #~/.linuxbrew/bin/brew install bat htop
 #brew install gdb gcc

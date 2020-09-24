@@ -26,6 +26,41 @@ mac 下gdb调试报错：
 Unable to find Mach task port for process-id 28885: (os/kern) failure (0x5).
  (please check gdb is codesigned - see taskgated(8))
 
+you can run command: brew info gdb
+
+brew info gdb
+gdb: stable 9.2, HEAD
+GNU debugger
+https://www.gnu.org/software/gdb/
+Conflicts with:
+  i386-elf-gdb (because both install include/gdb, share/gdb and share/info)
+/home/lianjiang.yulj/.linuxbrew/Cellar/gdb/9.2_1 (81 files, 31.6MB) *
+  Built from source on 2020-09-23 at 16:27:15
+From: https://github.com/Homebrew/linuxbrew-core/blob/HEAD/Formula/gdb.rb
+License: GPL-2.0
+==> Dependencies
+Build: texinfo ✔, pkg-config ✔
+Required: python@3.8 ✔, xz ✔, expat ✔, ncurses ✔, guile ✔
+==> Options
+--HEAD
+	Install HEAD version
+==> Caveats
+gdb requires special privileges to access Mach ports.
+You will need to codesign the binary. For instructions, see:
+
+  https://sourceware.org/gdb/wiki/BuildingOnDarwin
+
+On 10.12 (Sierra) or later with SIP, you need to run this:
+
+  echo "set startup-with-shell off" >> ~/.gdbinit
+==> Analytics
+install: 119 (30 days), 343 (90 days), 1,001 (365 days)
+install-on-request: 117 (30 days), 340 (90 days), 995 (365 days)
+build-error: 0 (30 days)
+
+
+
+
 解决办法：
 https://segmentfault.com/q/1010000004136334
 https://sourceware.org/gdb/wiki/PermissionsDarwin
