@@ -35,4 +35,4 @@ sudo yum install  alicpp-gcc921-gcc-debuginfo alicpp-gcc921-gcc alicpp-gcc921-gd
 ~/.linuxbrew/bin/brew install bat htop
 
 #for gdb 9.2
-~/.linuxbrew/bin/brew install gdb gcc
+~/.linuxbrew/bin/brew install gdb
