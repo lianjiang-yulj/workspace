@@ -3,7 +3,7 @@
 touch ~/.config/nvim/init.vim
 2. 添加 let g:python3_host_prog = 'your/python/path'
 eg:
-let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8'
+let g:python3_host_prog = '/opt/anaconda3/bin/python3.8'
 
 3. ～/.zshrc
 alias vim='nvim'
@@ -28,8 +28,8 @@ brew install yarn
 
 
 # for install neovim
-/Library/Frameworks/Python.framework/Versions/3.8/bin/pip3.8 install --upgrade pip
-/Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8  -m pip install pynvim
+/opt/anaconda3/bin/pip3.8 install --upgrade pip
+/opt/anaconda3/bin/python3.8  -m pip install pynvim
 
 
 
