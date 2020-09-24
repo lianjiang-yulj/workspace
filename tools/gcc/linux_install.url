@@ -10,8 +10,11 @@
 brew info gdb
 brew install gdb
 
-
+#for gcc 921, other higher verson to find from rpm/yum.tbsite.net
+#see http://rpm.corp.taobao.com/find.php?q=alicpp-gcc&t=&d=0&os=
+sudo yum install  alicpp-gcc921-gcc-debuginfo alicpp-gcc921-gcc alicpp-gcc921-gdb-debuginfo alicpp-gcc921-gdb  -bcurrent
 # install in here
-.linuxbrew/bin/g++
+.linuxbrew/bin/gdb
 
 #需要加入PATH
+see linux/bash_profile
