@@ -2,6 +2,8 @@
 点击Install
 1. https://github.com/neovim/neovim/wiki/Installing-Neovim
 2. install
+
+method1:
 2.1
 Linux
 AppImage ("universal" Linux package)
@@ -26,12 +28,15 @@ open dir error: No such file or directory
 you can run command:
 1. sudo yum install fuse -bcurrent
 2. retry: ./nvim.appimage
+3. sudo ln -s /home/lianjiang.yulj/workspace.github/bash_env/linux/neovim/nvim.appimage /usr/local/bin/nvim2
 
+
+
+
+method2:
 see : https://github.com/neovim/neovim/releases/
-
 ./nvim.appimage --appimage-extract
-
-sudo ln -s ~/workspace/squashfs-root/usr/bin/nvim /usr/local/bin/nvim
+sudo ln -s /home/lianjiang.yulj/workspace.github/bash_env/linux/neovim/squashfs-root/usr/bin/nvim /usr/local/bin/nvim
 
 
 
