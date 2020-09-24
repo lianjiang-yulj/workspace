@@ -27,6 +27,12 @@ sudo yum install perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker -bcurrent
 #for linux nvim
 sudo yum install fuse -bcurrent
 
+#for gcc 921
+#see http://rpm.corp.taobao.com/find.php?q=alicpp-gcc&t=&d=0&os=
+sudo yum install  alicpp-gcc921-gcc-debuginfo alicpp-gcc921-gcc alicpp-gcc921-gdb-debuginfo alicpp-gcc921-gdb  -bcurrent
+
 #install them after install linuxbrew 
 ~/.linuxbrew/bin/brew install bat htop
+
+#for gdb 9.2
 ~/.linuxbrew/bin/brew install gdb gcc

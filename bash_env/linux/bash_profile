@@ -13,26 +13,27 @@ fi
 # User specific environment and startup programs
 
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
+eval $(/home/lianjiang.yulj/.linuxbrew/bin/brew shellenv)
 
 export PATH
 
 # User specific environment and startup programs
 export JAVA_HOME=/opt/taobao/install/ajdk/
 export WORK_HOME=/home/lianjiang.yulj/workspace.github
-GCC_VERSION=8.2.0
-GDB_VERSION=8.2
-export GCC_HOME=$WORK_HOME/cxx_standard_tools/gcc-$GCC_VERSION/
-export GDB_HOME=$WORK_HOME/cxx_standard_tools/gdb-$GDB_VERSION/
+GCC_VERSION=9
+GDB_VERSION=7
+export GCC_HOME=/apsara/alicpp/built/gcc-9.2.1/gcc-9.2.1/
+export GDB_HOME=/apsara/alicpp/built/gcc-9.2.1/gdb-7.10/
 export CLANG_ROOT=$WORK_HOME/cxx_standard_tools/clang/clang/
 export MAVEN_HOME=$HOME/apache-maven-3.6.0/
 
 #找到动态库的路径
-export LD_LIBRARY_PATH=$GCC_HOME/lib64:$GCC_HOME/lib/gcc/x86_64-pc-linux-gnu/$GCC_VERSION/:$GCC_HOME/lib/gcc/x86_64-pc-linux-gnu/$GCC_VERSION/plugin:$GDB_HOME/usr/lib:/usr/local/lib64:/usr/local/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$GCC_HOME/lib64:$GDB_HOME/lib:/usr/local/lib64:/usr/local/lib:$LD_LIBRARY_PATH
 #找到静态库的路径
 export LIBRARY_PATH=$LD_LIBRARY_PATH:$LIBRARY_PATH
 
 #g++找到头文件的路径
-export CPLUS_INCLUDE_PATH=$GCC_HOME/include/c++/$GCC_VERSION:$GCC_HOME/include/c++/$GCC_VERSION/x86_64-pc-linux-gnu/:$CPLUS_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=$GCC_HOME/include/c++/$GCC_VERSION:$CPLUS_INCLUDE_PATH
 #gcc找到头文件的路径
 export C_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$C_INCLUDE_PATH
 
@@ -40,7 +41,7 @@ export C_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$C_INCLUDE_PATH
 export OBJCPLUS_INCLUDE_PATH=$LIBRARY_PATH:$CPLUS_INCLUDE_PATH:$OBJCPLUS_INCLUDE_PATH
 export OBJC_INCLUDE_PATH=$OBJCPLUS_INCLUDE_PATH:$OBJC_INCLUDE_PATH
 
-export PATH=$GCC_HOME/bin:$GCC_HOME/libexec/gcc/x86_64-pc-linux-gnu/$GCC_VERSION/:$GDB_HOME/usr/bin:$CLANG_ROOT/bin:$JAVA_HOME/bin:/usr/local/bin:$PATH
+export PATH=$GCC_HOME/bin:$GDB_HOME/bin:$CLANG_ROOT/bin:$JAVA_HOME/bin:/usr/local/bin:$PATH
 #export PYTHONPATH=/usr/lib/python2.7/site-packages/:/usr/lib64/python2.7/site-packages/:$PYTHONPATH
 
 export BAZEL_ROOT=$WORK_HOME/opensource/bazel_tutorial/bazel/
@@ -82,4 +83,3 @@ alias dpush='sudo docker push'
 alias ha3_env='sudo docker exec -u lianjiang.yulj -it lianjiang.yulj.ha3 /bin/bash'
 alias dev_env='sudo docker exec -it lianjiang.yulj.env /bin/bash'
 alias con_out='conda deactivate'
-eval $(/home/lianjiang.yulj/.linuxbrew/bin/brew shellenv)
