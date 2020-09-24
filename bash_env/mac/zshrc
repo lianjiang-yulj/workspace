@@ -114,9 +114,13 @@ alias cat="bat"
 alias ocat="bat -p"
 
 # nevim
-alias vim='nvim'
-alias vi='nvim'
-alias vimdiff='nvim -d'
+alias vim='/usr/local/bin/vim'
+alias vi='/usr/local/bin/vim'
+alias vimdiff='/usr/local/bin/vimdiff'
+
+alias nvim='/usr/local/bin/nvim'
+alias nvi='/usr/local/bin/nvim'
+alias nvimdiff='/usr/local/bin/nvim -d'
 alias bash='/usr/local/bin/bash'
 
 # gcc

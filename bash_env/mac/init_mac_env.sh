@@ -39,6 +39,7 @@ brew install tree
 brew install npm
 #brew install node # 安装npm会安装node依赖
 brew install yarn
+brew install vim
 
 
 # for install neovim
