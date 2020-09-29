@@ -13,7 +13,7 @@ fi
 # User specific environment and startup programs
 
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
-eval $(/home/lianjiang.yulj/.linuxbrew/bin/brew shellenv)
+#eval $(/home/lianjiang.yulj/.linuxbrew/bin/brew shellenv)
 
 export PATH
 
@@ -33,7 +33,7 @@ export LD_LIBRARY_PATH=$GCC_HOME/lib64:$GDB_HOME/lib:/usr/local/lib64:/usr/local
 export LIBRARY_PATH=$LD_LIBRARY_PATH:$LIBRARY_PATH
 
 #g++找到头文件的路径
-export CPLUS_INCLUDE_PATH=$GCC_HOME/include/c++/$GCC_VERSION:$CPLUS_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=$GCC_HOME/include/c++/$GCC_VERSION:$GCC_HOME/include/c++/9/x86_64-unknown-linux-gnu/:$CPLUS_INCLUDE_PATH
 #gcc找到头文件的路径
 export C_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$C_INCLUDE_PATH
 

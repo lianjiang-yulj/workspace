@@ -1,0 +1,52 @@
+http://clang.org/
+
+http://releases.llvm.org/download.html
+https://github.com/llvm/llvm-project/releases
+
+
+#wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.1/clang+llvm-10.0.1-x86_64-linux-gnu-ubuntu-16.04.tar.xz
+
+support: c++2a
+1. wget https://github.com/llvm/llvm-project/releases/download/llvmorg-9.0.1/clang+llvm-9.0.1-x86_64-linux-gnu-ubuntu-16.04.tar.xz
+
+
+tar -xf clang+llvm-x.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz
+
+
+xz -d *.xz // decompress
+xz -z *.tar // compress
+
+https://www.jb51.net/LINUXjishu/43356.html
+bunzip2 -d  xxx.tar.bz2 // xxx.tar.bz2->xxx.tar
+bzip2 -z xxx.tar // xxx.tar->xxx.tar.bz2
+tar -cvjf clang+llvm-xxx.tar.bz2 clang+llvm-xxx.tar
+tar -xvjf xxx.bz2
+
+
+
+2. set CPLUS_INCLUDE_PATH in .bash_profile
+
+
+3. install system clang
+#for clang
+sudo yum install clang llvm make cmake -bcurrent
+sudo yum install perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker -bcurrent
+#clang-8.0.1-9.alios7.x86_64
+#llvm-8.0.1-9.alios7.x86_64
+#make-3.82-21.1.alios7.x86_64
+#cmake-3.8.2-20170711173356.alios7.x86_64
+
+4. install system gcc/gdb
+#for gcc 921
+#see http://rpm.corp.taobao.com/find.php?q=alicpp-gcc&t=&d=0&os=
+sudo yum install  alicpp-gcc921-gcc-debuginfo alicpp-gcc921-gcc alicpp-gcc921-gdb-debuginfo alicpp-gcc921-gdb  -bcurrent
+
+
+5. #for gdb 9.2
+ ~/.linuxbrew/bin/brew install gdb
+
+6. test clang compile
+Fix 使用 GDB 调试 Clang 编译的程序时标准库类型始终显示 incomplete type
+https://kingsamchen.github.io/2017/09/03/fix-incomplete-type-when-using-gdb-with-clang/
+
+clang++ ../c++17.cc -std=c++2a -g -ggdb -o c++17.clang  -L/apsara/alicpp/built/gcc-9.2.1/gcc-9.2.1/lib64/ -fno-limit-debug-info
