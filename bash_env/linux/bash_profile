@@ -25,7 +25,7 @@ GDB_VERSION=7
 export GCC_HOME=/apsara/alicpp/built/gcc-9.2.1/gcc-9.2.1/
 export GDB_HOME=/apsara/alicpp/built/gcc-9.2.1/gdb-7.10/
 export CLANG_ROOT=$WORK_HOME/cxx_standard_tools/clang/clang/
-export MAVEN_HOME=$HOME/apache-maven-3.6.0/
+export MAVEN_HOME=$HOME/apache-maven-3.6.3/
 
 #找到动态库的路径
 export LD_LIBRARY_PATH=$GCC_HOME/lib64:$GDB_HOME/lib:/usr/local/lib64:/usr/local/lib:$LD_LIBRARY_PATH

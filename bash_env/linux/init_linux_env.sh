@@ -36,3 +36,4 @@ sudo yum install  alicpp-gcc921-gcc-debuginfo alicpp-gcc921-gcc alicpp-gcc921-gd
 
 #for gdb 9.2
 ~/.linuxbrew/bin/brew install gdb
+~/.linuxbrew/bin/brew install maven
