@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include <map>
 #include <string>
 #include <functional>
@@ -19,6 +20,8 @@ int main() {
     out.get() << ".\n";
   }();
 
+  vector<int> v(3,7);
+  v.push_back(10);
   return 0;
 }
 

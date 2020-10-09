@@ -4,7 +4,7 @@ link_path=`greadlink -f $0`
 echo -e "bash $link_path \n"
 
 dir=`dirname $link_path`
-for f in bash_profile gitconfig bashrc zshrc zprofile
+for f in bash_profile gitconfig bashrc zshrc zprofile gdbinit
 
 do
 	if [ -f $dir/$f ]; then

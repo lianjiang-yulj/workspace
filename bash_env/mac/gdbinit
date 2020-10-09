@@ -1,0 +1,10 @@
+set startup-with-shell off
+add-auto-load-safe-path /usr/local/Cellar/gcc/10.2.0/lib/gcc/10/libstdc++.a-gdb.py
+set print pretty on
+set print elements 0
+#python
+#import sys
+#sys.path.insert(0, '/usr/local/Cellar/gcc/10.2.0/share/gcc-10.2.0/python/')
+#from libstdcxx.v6.printers import register_libstdcxx_printers
+#register_libstdcxx_printers (None)
+#end

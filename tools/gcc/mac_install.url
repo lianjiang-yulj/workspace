@@ -74,3 +74,10 @@ echo "set startup-with-shell off" >> ~/.gdbinit
 3. 参见1.3
 https://sourceware.org/gdb/wiki/PermissionsDarwin
 
+
+
+# if 
+Starting program: /Users/lianjiang.yulj/workspace.github/cxx_standard_tools/c++17.g++
+[New Thread 0x2903 of process 8460]
+
+kill -s TRAP 8458
