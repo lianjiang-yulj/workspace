@@ -52,5 +52,8 @@ brew install gcc gdb
 
 conda install seaborn
 conda install plotly
+conda install pandas
+conda install pandocfilters
+conda install pandoc
 
 /opt/anaconda3/bin/pip3 install uqer

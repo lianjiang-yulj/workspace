@@ -44,5 +44,8 @@ sudo yum install  alicpp-gcc921-gcc-debuginfo alicpp-gcc921-gcc alicpp-gcc921-gd
 
 conda install seaborn
 conda install plotly
+conda install pandas
+conda install pandocfilters
+conda install pandoc
 
 /opt/anaconda3/bin/pip3 install uqer
