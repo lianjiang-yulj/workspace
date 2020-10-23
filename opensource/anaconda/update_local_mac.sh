@@ -1,1 +1,1 @@
-../../tools/update_local_mac.sh
+../../tools/update_local_brew_conda.sh
