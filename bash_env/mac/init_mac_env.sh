@@ -49,3 +49,8 @@ brew install vim
 brew install bash #update bash
 
 brew install gcc gdb
+
+conda install seaborn
+conda install plotly
+
+/opt/anaconda3/bin/pip3 install uqer
