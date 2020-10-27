@@ -2,6 +2,9 @@
 
 #Usage: zsh update_local_brew_conda.sh
 
+#update python3.8.5
+#conda install python=3.8.5 -c anaconda
+#
 brew upgrade
 brew update
 
