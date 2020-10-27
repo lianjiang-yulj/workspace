@@ -31,7 +31,8 @@ brew install yarn
 /opt/anaconda3/bin/pip3.8 install --upgrade pip
 /opt/anaconda3/bin/python3.8  -m pip install pynvim
 
-
+conda install nodejs
+conda install ruby
 
 
 6. neovim -> :checkhealth (see : https://github.com/neovim/neovim/wiki/Following-HEAD#20181118)
