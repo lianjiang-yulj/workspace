@@ -31,7 +31,7 @@ path=""
 
 for dir in `ls $HOME/ -a`
 do
-    if [ "$dir" == "." -o "$dir" == ".." ]; then
+    if [ "$dir" == "." -o "$dir" == ".." -o "$dir" == ".ssh" ]; then
 
         echo $dir"TTT"
         continue;
