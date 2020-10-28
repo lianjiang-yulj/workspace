@@ -33,6 +33,7 @@ brew install yarn
 
 conda install nodejs
 conda install ruby
+conda install yarn
 
 
 6. neovim -> :checkhealth (see : https://github.com/neovim/neovim/wiki/Following-HEAD#20181118)

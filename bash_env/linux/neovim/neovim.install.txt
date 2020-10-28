@@ -85,6 +85,7 @@ conda update -n base anaconda
 conda install -c anaconda nodejs
 conda install nodejs
 conda install ruby
+conda install yarn
 
 conda activate base
 /opt/anaconda3/bin/npm install -g yarn
