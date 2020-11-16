@@ -21,6 +21,7 @@ else
     conda deactivate
     conda update -c defaults conda
     conda update -n base -c defaults conda
+    conda update -n sas -c defaults conda
     conda update conda
     conda update anaconda
     conda update anaconda-navigator
