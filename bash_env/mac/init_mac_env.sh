@@ -59,6 +59,7 @@ conda install pandoc
 /opt/anaconda3/bin/pip3 install uqer --upgrade
 
 /opt/anaconda3/bin/pip3 install flake8 yapf
+#conda install flake8 yapf -c anaconda
 
 /opt/anaconda3/envs/sas/bin/pip3.8 install tushare --upgrade
 

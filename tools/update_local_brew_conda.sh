@@ -24,6 +24,7 @@ else
     conda update -n sas -c defaults conda -y
     conda update -n pythonProject -c defaults conda -y
     conda update -n py38 -c defaults conda -y
+    conda update -n zipline -c defaults conda -y
     conda update conda -y
     conda update anaconda -y
     conda update anaconda-navigator -y
