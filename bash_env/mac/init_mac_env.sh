@@ -56,4 +56,40 @@ conda install pandas
 conda install pandocfilters
 conda install pandoc
 
-/opt/anaconda3/bin/pip3 install uqer
+/opt/anaconda3/bin/pip3 install uqer --upgrade
+
+/opt/anaconda3/bin/pip3 install flake8 yapf
+
+/opt/anaconda3/envs/sas/bin/pip3.8 install tushare --upgrade
+
+conda create -n sas --clone base
+
+/Library/Frameworks/Python.framework/Versions/3.9/bin/pip3 install pandas numpy
+
+
+
+
+
+#关于QP的量化三大件：pyFolio，zipline，alphalens
+conda create -n sas --clone base
+conda activate sas
+
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
+
+
+conda install -c conda-forge alphalens
+#pip install alphalens
+
+
+conda install -c quantopian pyfolio
+#pip install pyfolio
+
+
+# 注意，zipline 依赖python3.5.6, PYTHON < 3.6 VERSION
+conda create -n zipline python=3.5
+conda install -c quantopian zipline
+#pip install zipline
+
+/opt/anaconda3/envs/zipline/bin/pip install backtrader --upgrade

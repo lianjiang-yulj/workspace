@@ -19,14 +19,16 @@ else
     conda init zsh
 
     conda deactivate
-    conda update -c defaults conda
-    conda update -n base -c defaults conda
-    conda update -n sas -c defaults conda
-    conda update conda
-    conda update anaconda
-    conda update anaconda-navigator
+    conda update -c defaults conda -y
+    conda update -n base -c defaults conda -y
+    conda update -n sas -c defaults conda -y
+    conda update -n pythonProject -c defaults conda -y
+    conda update -n py38 -c defaults conda -y
+    conda update conda -y
+    conda update anaconda -y
+    conda update anaconda-navigator -y
 
-    conda update --all
-    conda update --prefix /opt/anaconda3 --update-all
-    conda update --prefix /opt/anaconda3 anaconda
+    conda update --all -y
+    conda update --prefix /opt/anaconda3 --update-all -y
+    conda update --prefix /opt/anaconda3 anaconda -y
 fi
