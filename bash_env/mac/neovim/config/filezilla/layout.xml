@@ -7,6 +7,8 @@
 		</Resources>
 		<Language id="default">
 			<Font font="0;13;70;90;90;0;.AppleSystemUIFont;73" width="779" height="15" />
+			<Dialog name="Settings" width="849" />
+			<Dialog name="Netconf" width="1142" />
 		</Language>
 	</Layout>
 </FileZilla3>
