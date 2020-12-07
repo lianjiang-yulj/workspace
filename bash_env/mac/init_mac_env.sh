@@ -55,13 +55,23 @@ conda install plotly
 conda install pandas
 conda install pandocfilters
 conda install pandoc
-
+conda install cvxopt
 /opt/anaconda3/bin/pip3 install uqer --upgrade
 
 /opt/anaconda3/bin/pip3 install flake8 yapf
 #conda install flake8 yapf -c anaconda
 
 /opt/anaconda3/envs/sas/bin/pip3.8 install tushare --upgrade
+
+
+#install jupyter notebook
+pip3 install jupyter jupyter-kite jupyter_client jupyter_console jupyter_core jupyterlab jupyterlab-server jupyterlab_pygments
+pip3 install jupyter-kite
+jupyter labextension install "@kiteco/jupyterlab-kite"
+
+#https://help.kite.com/article/143-how-to-install-the-jupyterlab-plugin
+#pip install --upgrade jupyter-kite
+#jupyter labextension update "@kiteco/jupyterlab-kite"
 
 conda create -n sas --clone base
 

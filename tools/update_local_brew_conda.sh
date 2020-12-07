@@ -42,6 +42,7 @@ echo "# 然后更新每个环境的包，这里面每个环境并没有安装con
     conda update -n py38 -c defaults conda -y
     conda update -n zipline -c defaults conda -y
     conda update -n quantitative -c defaults conda -y
+    conda update -n stock -c defaults conda -y
 
 echo "#更新每一个环境的所有包"
     conda update --all -y
@@ -51,4 +52,5 @@ echo "#更新每一个环境的所有包"
     conda update -n base -c defaults --update-all -y
     conda update -n sas -c defaults --update-all -y
     conda update -n quantitative -c defaults --update-all -y
+    conda update -n stock -c defaults --update-all -y
 fi
