@@ -65,7 +65,10 @@ conda install cvxopt
 
 
 #install jupyter notebook
-pip3 install jupyter jupyter-kite jupyter_client jupyter_console jupyter_core jupyterlab jupyterlab-server jupyterlab_pygments
+conda install jupyter jupyter-kite jupyter_client jupyter_console jupyter_core jupyterlab jupyterlab-server jupyterlab_pygments
+# jupyter-kite jupyterlab-server 可能不再conda 的channel里面，安装报错的时候去掉这2个包即可，其中jupyterlab-server会被自动依赖进来
+
+pip3 install pip --upgrade
 pip3 install jupyter-kite
 jupyter labextension install "@kiteco/jupyterlab-kite"
 
@@ -80,6 +83,13 @@ conda create -n sas --clone base
 
 
 
+# conda env list 
+# base = root, stock = base, clone from base # root环境不可随意变更
+# py38 python3.8.5
+# pythonProject3.8.5
+# quantitative = sas # for 量化股票分析环境
+# quantitative = sas # for 量化股票分析环境
+# zipline # python=3.5.6, for zipline
 
 #关于QP的量化三大件：pyFolio，zipline，alphalens
 conda create -n sas --clone base
