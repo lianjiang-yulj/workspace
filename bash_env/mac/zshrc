@@ -133,6 +133,7 @@ alias cmake='/usr/local/bin/cmake'
 
 # add gmake path
 PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 # anaconda python3
 # export PATH="/opt/anaconda3/bin:$PATH"  # commented out by conda initialize
