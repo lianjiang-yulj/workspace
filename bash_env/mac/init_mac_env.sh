@@ -114,3 +114,12 @@ conda install -c quantopian zipline
 #pip install zipline
 
 /opt/anaconda3/envs/zipline/bin/pip install backtrader --upgrade
+
+
+
+
+# install microsoft qlib 微软开源qlib量化库
+
+conda activate base
+pip3 install --upgrade  cython numpy
+pip3 install pyqlib
