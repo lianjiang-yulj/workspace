@@ -48,3 +48,8 @@ conda update --all
 
 conda init zsh
 conda init bash
+
+
+# conda revert conda 回滚之前某个版本
+conda list -r # 例如：2020-12-08 14:15:30  (rev 31)
+conda install --revision  31

@@ -123,10 +123,6 @@
 		<Setting name="Queue column widths">656 217 180 80 60 150</Setting>
 		<Setting name="Last automatic update version">3.51.0</Setting>
 		<Setting name="Splitter positions (v2)">50 -177 500000000 194 179 500000000</Setting>
-		<Setting name="Last automatic update check">2020-11-26 02:57:04</Setting>
-		<Setting name="Update Check New Version" platform="mac">nightly 2020-11-24 https://filezilla-project.org/nightlies/2020-11-24/x86_64-apple-darwin18.2.0/FileZilla3.app.tar.bz2 17101863 sha512 8dafc82fa7e1b6c0795d646118b2f9dfe6b5a3028085979844c33a83f947af3e59c805ec2f9f3782ee76f162edc8fc974f17529906cb2b95da89e3a3b4dc1dc4 sig:2xA7mMynEcMsR46FxfQ1zWDTVLAJf6qqyNeR8JDYUsS1rq+6Bcs++cwWzbhdpSmKbyVij76rqA/kntm38ORSBQ
-release 3.51.0 https://dl1.cdn.filezilla-project.org/FileZilla_3.51.0_macosx-x86.app.tar.bz2 16175443 sha512 82d16bf43828391fc0b63e41bd508ef320aa702ca10be1415eb1aeb7e5af9f084d4ba6d39c230f79c8cbb026153c25dcbc8f24b0cfe8f4a1c9246bf0f933a373 sig:9oadasBpmFpO35YP/KmCzR6BXcDK3Et4Wzyt1dSPYeOmRGWCaAACy8FoLWv/TVzM5pbxIy3vdgCxpqMrX5mNDA
-</Setting>
 		<Setting name="Already connected choice">1</Setting>
 		<Setting name="Local filelist colwidths">344 80 120 120</Setting>
 		<Setting name="Remote filelist colwidths">386 110 80 100 80 85</Setting>
@@ -136,12 +132,16 @@ release 3.51.0 https://dl1.cdn.filezilla-project.org/FileZilla_3.51.0_macosx-x86
 		<Setting name="Search window size">0 0 188 1440 500 </Setting>
 		<Setting name="Site Manager position">0 274 217 820 441 </Setting>
 		<Setting name="Window position and size">0 137 81 1095 666 </Setting>
+		<Setting name="Last automatic update check">2020-12-10 11:32:15</Setting>
+		<Setting name="Update Check New Version" platform="mac">nightly 2020-11-26 https://filezilla-project.org/nightlies/2020-11-26/x86_64-apple-darwin18.2.0/FileZilla3.app.tar.bz2 17087171 sha512 f8e15fc3f91d355cc8dcecf2918c01429f58e9126b0284241dfd2b6b26ae8b337de2384663c310cf130b53f1714108661a290eb8c7a309f310575c4edfe03adf sig:NRZ7xT6VfrK6Jte6IVLkaxAGeNd6uyZ2UKn4/LQriaO8yPTZ/m6hrwK+UMyueHTYRJFqczvD2bRWgM4Ed9NcDQ
+release 3.51.0 https://dl4.cdn.filezilla-project.org/FileZilla_3.51.0_macosx-x86.app.tar.bz2 16175443 sha512 82d16bf43828391fc0b63e41bd508ef320aa702ca10be1415eb1aeb7e5af9f084d4ba6d39c230f79c8cbb026153c25dcbc8f24b0cfe8f4a1c9246bf0f933a373 sig:9oadasBpmFpO35YP/KmCzR6BXcDK3Et4Wzyt1dSPYeOmRGWCaAACy8FoLWv/TVzM5pbxIy3vdgCxpqMrX5mNDA
+</Setting>
 		<Setting name="Tab data" sensitive="1">
 			<Tabs>
 				<Tab connected="1" selected="1">
 					<Host>123.56.67.64</Host>
 					<Port>21</Port>
-					<Protocol>6</Protocol>
+					<Protocol>0</Protocol>
 					<Type>0</Type>
 					<User>yulianjiang</User>
 					<Pass encoding="base64">aWI1aHg=</Pass>
@@ -149,10 +149,9 @@ release 3.51.0 https://dl1.cdn.filezilla-project.org/FileZilla_3.51.0_macosx-x86
 					<PasvMode>MODE_DEFAULT</PasvMode>
 					<EncodingType>Auto</EncodingType>
 					<BypassProxy>0</BypassProxy>
-					<Name>sas</Name>
-					<Site>0/sas</Site>
-					<RemotePath>1 0</RemotePath>
-					<LocalPath>/Users/lianjiang.yulj/workspace.github/study.code/sas/Python程序/</LocalPath>
+					<Site></Site>
+					<RemotePath>1 0 4 课程录播</RemotePath>
+					<LocalPath>/Users/lianjiang.yulj/workspace.github/study.code/sas/SAS程序/T0因子案例/</LocalPath>
 				</Tab>
 			</Tabs>
 		</Setting>

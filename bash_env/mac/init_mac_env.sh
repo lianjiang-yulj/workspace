@@ -50,19 +50,22 @@ brew install bash #update bash
 
 brew install gcc gdb
 
-conda install seaborn
-conda install plotly
-conda install pandas
-conda install pandocfilters
-conda install pandoc
-conda install cvxopt
-/opt/anaconda3/bin/pip3 install uqer --upgrade
+#conda install seaborn
+#conda install plotly
+#conda install pandas
+#conda install pandocfilters
+#conda install pandoc
+#conda install cvxopt
 
-/opt/anaconda3/bin/pip3 install flake8 yapf
+conda install cvxopt pandoc pandocfilters pandas plotly seaborn
+#/opt/anaconda3/bin/pip3 install uqer --upgrade
+
+#/opt/anaconda3/bin/pip3 install flake8 yapf
 #conda install flake8 yapf -c anaconda
 
-/opt/anaconda3/envs/sas/bin/pip3.8 install tushare --upgrade
+#/opt/anaconda3/envs/sas/bin/pip3.8 install tushare --upgrade
 
+pip3 install uqer flake8 yapf tushare --upgrade
 
 #install jupyter notebook
 conda install jupyter jupyter-kite jupyter_client jupyter_console jupyter_core jupyterlab jupyterlab-server jupyterlab_pygments
@@ -90,6 +93,7 @@ conda create -n sas --clone base
 # quantitative = sas # for 量化股票分析环境
 # quantitative = sas # for 量化股票分析环境
 # zipline # python=3.5.6, for zipline
+# pyqlib # python=3.7.9, for microsoft qlib 开源量化库
 
 #关于QP的量化三大件：pyFolio，zipline，alphalens
 conda create -n sas --clone base
@@ -121,5 +125,13 @@ conda install -c quantopian zipline
 # install microsoft qlib 微软开源qlib量化库
 
 conda activate base
-pip3 install --upgrade  cython numpy
+pip3 install --upgrade  cython
 pip3 install pyqlib
+
+
+# conda revert conda 回滚之前某个版本
+conda list -r # 例如：2020-12-08 14:15:30  (rev 31)
+conda install --revision  31
+
+# 发生意外，可以强制更新conda
+#conda update -n base -c defaults conda --force
