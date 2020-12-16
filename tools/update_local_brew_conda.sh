@@ -9,6 +9,7 @@
 echo $1
 
 if [ "x$1" = "x0" ]; then
+    echo $PATH
     brew upgrade
     brew update
 elif [ "x$1" = "x1" ]; then
