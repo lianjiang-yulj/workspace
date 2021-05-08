@@ -10,6 +10,9 @@ make -j8
 or mac: brew install vim
 2. install vimcdoc
 http://vimcdoc.sourceforge.net/
+tar -zxvf vimcdoc-2.3.0.tar.gz
+cd vimcodc-2.3.0
+sh vimcdoc.sh -i
 
 3. install Vundle
 https://github.com/VundleVim/Vundle.vim

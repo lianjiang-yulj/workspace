@@ -48,7 +48,7 @@ brew install vim
 
 brew install bash #update bash
 
-brew install gcc gdb
+#brew install gcc gdb
 
 #conda install seaborn
 #conda install plotly
@@ -79,9 +79,9 @@ jupyter labextension install "@kiteco/jupyterlab-kite"
 #pip install --upgrade jupyter-kite
 #jupyter labextension update "@kiteco/jupyterlab-kite"
 
-conda create -n sas --clone base
+#conda create -n sas --clone base
 
-/Library/Frameworks/Python.framework/Versions/3.9/bin/pip3 install pandas numpy
+#/Library/Frameworks/Python.framework/Versions/3.9/bin/pip3 install pandas numpy
 
 
 
@@ -96,28 +96,28 @@ conda create -n sas --clone base
 # pyqlib # python=3.7.9, for microsoft qlib 开源量化库
 
 #关于QP的量化三大件：pyFolio，zipline，alphalens
-conda create -n sas --clone base
-conda activate sas
+#conda create -n sas --clone base
+#conda activate sas
 
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
-conda config --set show_channel_urls yes
+#conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+#conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+#conda config --set show_channel_urls yes
 
 
-conda install -c conda-forge alphalens
+#conda install -c conda-forge alphalens
 #pip install alphalens
 
 
-conda install -c quantopian pyfolio
+#conda install -c quantopian pyfolio
 #pip install pyfolio
 
 
 # 注意，zipline 依赖python3.5.6, PYTHON < 3.6 VERSION
-conda create -n zipline python=3.5
-conda install -c quantopian zipline
+#conda create -n zipline python=3.5
+#conda install -c quantopian zipline
 #pip install zipline
 
-/opt/anaconda3/envs/zipline/bin/pip install backtrader --upgrade
+#/opt/anaconda3/envs/zipline/bin/pip install backtrader --upgrade
 
 
 
@@ -130,8 +130,8 @@ pip3 install pyqlib
 
 
 # conda revert conda 回滚之前某个版本
-conda list -r # 例如：2020-12-08 14:15:30  (rev 31)
-conda install --revision  31
+#conda list -r # 例如：2020-12-08 14:15:30  (rev 31)
+#conda install --revision  31
 
 # 发生意外，可以强制更新conda
 #conda update -n base -c defaults conda --force

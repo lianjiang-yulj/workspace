@@ -14,7 +14,7 @@ alias goto="${HOME}/workspace.github/tools/goto.sh"
 alias readlink=/usr/local/bin/greadlink
 # java environment
 
-export JAVA_HOME=`/usr/libexec/java_home --version 1.8.0_271`
+export JAVA_HOME=`/usr/libexec/java_home --version 1.8.0_291`
 export PATH=${JAVA_HOME}/bin:/usr/local/go/bin:$PATH
 export GOROOT=/usr/local/go
 export GOPATH=${HOME}/workspace/go

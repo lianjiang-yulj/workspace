@@ -37,7 +37,7 @@ conda install yarn
 
 
 6. neovim -> :checkhealth (see : https://github.com/neovim/neovim/wiki/Following-HEAD#20181118)
-7. neovim -> :PluginStatus
+7. neovim -> :PlugStatus
 8. neovim -> :PluginInstall
 # 通过 shell command: nvim, :checkhealth 来检查错误
 
