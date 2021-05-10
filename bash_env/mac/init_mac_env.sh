@@ -27,6 +27,7 @@ brew install coreutils
 #https://zhuanlan.zhihu.com/p/98384704
 #https://www.cnblogs.com/kevingrace/p/6496899.html
 brew install tmux
+brew install cmake
 brew install wget
 brew install git-lfs
 brew install autojump
@@ -44,7 +45,7 @@ brew install vim
 
 # for install neovim
 /opt/anaconda3/bin/pip3.8 install --upgrade pip
-/opt/anaconda3/bin/python3.8  -m pip install pynvim
+#/opt/anaconda3/bin/python3.8  -m pip install pynvim
 
 brew install bash #update bash
 
