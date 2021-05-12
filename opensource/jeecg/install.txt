@@ -1,0 +1,45 @@
+http://doc.jeecg.com/2043873
+https://dev.mysql.com/downloads/mysql/
+
+
+1. redis
+brew install redis
+
+2. mysql
+https://dev.mysql.com/downloads/file/?id=505134
+https://zhuanlan.zhihu.com/p/27960044
+
+#mac 如果是8.0+版本用上面链接的installer安装，如果是装5.7+的版本，用brew，但是8.0+和5.7+的my.cnf会有冲突，需要注释mysqlx-bind-address
+brew install mysql@5.7/xxx
+
+/usr/local/etc/my.cnf
+# Default Homebrew MySQL server config
+[mysqld]
+# Only allow connections from localhost
+bind-address = 127.0.0.1
+#mysqlx-bind-address = 127.0.0.1 #这个选项是给8.0+的高版本使用
+~
+
+We've installed your MySQL database without a root password. To secure it run:
+    mysql_secure_installation
+
+MySQL is configured to only allow connections from localhost by default
+
+To connect run:
+    mysql -uroot
+
+mysql@5.7 is keg-only, which means it was not symlinked into /usr/local,
+because this is an alternate version of another formula.
+
+If you need to have mysql@5.7 first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find mysql@5.7 you may need to set:
+  export LDFLAGS="-L/usr/local/opt/mysql@5.7/lib"
+  export CPPFLAGS="-I/usr/local/opt/mysql@5.7/include"
+
+
+To have launchd start mysql@5.7 now and restart at login:
+  brew services start mysql@5.7
+Or, if you don't want/need a background service you can just run:
+  /usr/local/opt/mysql@5.7/bin/mysql.server start

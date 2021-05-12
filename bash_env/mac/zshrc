@@ -134,10 +134,24 @@ alias gcc='/usr/local/bin/gcc-10'
 #alias make='/usr/local/bin/gmake'
 alias gdb='/usr/local/bin/gdb'
 alias cmake='/usr/local/bin/cmake'
+# alias for tmux
+alias tmuxa='/usr/local/bin/tmux attach-session -t'
+alias tmuxd='/usr/local/bin/tmux detach'
+alias tmuxl='/usr/local/bin/tmux list-sessions'
+alias tmuxn='/usr/local/bin/tmux new -s'
+alias tmuxk='/usr/local/bin/tmux kill-session -t'
+alias tmuxs='/usr/local/bin/tmux switch -t'
+alias tmuxe='exit'
 
 # add gmake path
 PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 PATH="/usr/local/opt/sqlite/bin:$PATH"
+
+
+# add mysql
+#
+MYSQL_HOME="/usr/local/opt/mysql@5.7"
+PATH="$MYSQL_HOME/bin:$PATH"
 
 # anaconda python3
 # export PATH="/opt/anaconda3/bin:$PATH"  # commented out by conda initialize

@@ -44,8 +44,10 @@ brew install vim
 
 
 # for install neovim
-/opt/anaconda3/bin/pip3.8 install --upgrade pip
-#/opt/anaconda3/bin/python3.8  -m pip install pynvim
+# 当前pip-21.1.1有bug，不要使用这个版本，用pip-20.0.1
+#如果pip不小心升级到了21.1.1，则拷贝/opt/anaconda3/lib/python3.8/site-packages/pip 到对应的env中
+#/opt/anaconda3/bin/pip3.8 install --upgrade pip
+/opt/anaconda3/bin/python3.8  -m pip install pynvim
 
 brew install bash #update bash
 
