@@ -1,0 +1,24 @@
+
+show databases;
+
+SELECT
+	*
+FROM
+	INFORMATION_SCHEMA.TABLES 
+WHERE
+	TABLE_SCHEMA = 'flowable';
+    
+    SELECT
+	TABLE_NAME,
+	COLUMN_NAME,
+	DATA_TYPE,
+	COLUMN_COMMENT 
+FROM
+	INFORMATION_SCHEMA.COLUMNS 
+WHERE
+	TABLE_SCHEMA = 'database_name' 
+	AND TABLE_NAME = 'tablename';
+    
+use flowable;
+SHOW TABLES ;
+

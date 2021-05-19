@@ -153,6 +153,10 @@ PATH="/usr/local/opt/sqlite/bin:$PATH"
 MYSQL_HOME="/usr/local/opt/mysql@5.7"
 PATH="$MYSQL_HOME/bin:$PATH"
 
+# add ruby/gem
+#
+PATH="/usr/local/opt/ruby/bin:$PATH"
+
 # anaconda python3
 # export PATH="/opt/anaconda3/bin:$PATH"  # commented out by conda initialize
 

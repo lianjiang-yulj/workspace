@@ -41,7 +41,11 @@ brew install npm
 #brew install node # 安装npm会安装node依赖
 brew install yarn
 brew install vim
-
+# 
+brew install ruby # gem will be installed after ruby
+brew install asciidoctor # https://github.com/qiudaoke/flowable-userguide/tree/master/V6.5.0/docs/userguide
+git clone git@github.com:chloerei/asciidoctor-pdf-cjk-kai_gen_gothic.git
+cd asciidoctor-pdf-cjk-kai_gen_gothic
 
 # for install neovim
 # 当前pip-21.1.1有bug，不要使用这个版本，用pip-20.0.1
