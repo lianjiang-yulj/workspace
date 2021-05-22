@@ -16,7 +16,7 @@ WHERE
 FROM
 	INFORMATION_SCHEMA.COLUMNS 
 WHERE
-	TABLE_SCHEMA = 'database_name' 
+	TABLE_SCHEMA = 'flowable' 
 	AND TABLE_NAME = 'tablename';
     
 use flowable;

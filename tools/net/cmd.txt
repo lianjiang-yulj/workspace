@@ -1,0 +1,40 @@
+查看网络
+sudo lsof -i tcp:8080
+
+sudo lsof -nP -iTCP -sTCP:LISTEN
+
+
+sof（list open files）是一个列出当前系统打开文件的工具。
+
+常用命令：
+1. 查看指定端口占用情况：
+
+sudo lsof -nP -iTCP:端口号 -sTCP:LISTEN
+2. 查看所有进程监听的端口：
+
+sudo lsof -nP -iTCP -sTCP:LISTEN
+3. 查看所有java进程监听的端口：
+
+sudo lsof -nP -iTCP -sTCP:LISTEN | grep java
+结果如下：
+
+java  45380 vision  140u  IPv6 0x907f281d0aff1577      0t0  TCP *:53761 (LISTEN)
+java  45380 vision  141u  IPv6 0x907f281d12df9037      0t0  TCP *:53759 (LISTEN)
+java  45380 vision  147u  IPv6 0x907f281d1127f597      0t0  TCP *:53762 (LISTEN)
+java  45380 vision  154u  IPv6 0x907f281d112e2597      0t0  TCP *:8761 (LISTEN)
+java  45382 vision  159u  IPv6 0x907f281d16a36577      0t0  TCP *:53774 (LISTEN)
+java  45382 vision  160u  IPv6 0x907f281d16a36017      0t0  TCP *:53772 (LISTEN)
+java  45382 vision  166u  IPv6 0x907f281d14c7b557      0t0  TCP *:53775 (LISTEN)
+java  45382 vision  184u  IPv6 0x907f281d16a73fd7      0t0  TCP *:8081 (LISTEN)
+4. 输出占用该端口的 PID：
+
+lsof -nP -iTCP:端口号 |grep LISTEN|awk '{print $2;}'
+lsof命令会同时列出PID，方便kill。
+
+n 表示不显示主机名
+P 表示不显示端口俗称
+不加 sudo 只能查看以当前用户运行的程序
+
+5. 查看指定端口被占用的应用程序信息
+sudo lsof -i tcp:port
+如： sudo lsof -i tcp:8761

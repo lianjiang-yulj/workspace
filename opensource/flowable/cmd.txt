@@ -1,0 +1,2 @@
+ docker run -p8081:8080 flowable/flowable-rest
+ docker run -p8082:8080 flowable/flowable-ui
