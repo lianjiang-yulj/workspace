@@ -1,5 +1,8 @@
 # IntelliJ IDEA IDE
 .idea
+# maven
+#
+target/
 
 # Compiled Python files
 *.pyc
