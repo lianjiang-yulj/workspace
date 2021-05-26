@@ -143,6 +143,8 @@ alias tmuxk='/usr/local/bin/tmux kill-session -t'
 alias tmuxs='/usr/local/bin/tmux switch -t'
 alias tmuxe='exit'
 
+
+alias mvnp='mvn clean package -DskipTests -Pdeploy -Dmaven.javadoc.skip=true -Dmaven.test.skip=true'
 # add gmake path
 PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 PATH="/usr/local/opt/sqlite/bin:$PATH"
