@@ -4,3 +4,24 @@ brew update
 
 https://brew.sh/index_zh-cn
 
+#如果遇到
+解决raw.githubusercontent.com地址DNS污染
+
+sudo vi /etc/hosts
+参见https://blog.csdn.net/qq_43531694/article/details/106862753
+通过网址https://www.ipaddress.com/ 查看域名对应的ip地址加入/etc/hosts
+错误github|fatal:unable to access|OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com
+检查git的config
+git config --list
+以及user.name 和user.email
+需要设置正确的name和email，到github上设置
+
+eg. /etc/hosts
+185.199.108.133 raw.githubusercontent.com
+185.199.109.133 raw.githubusercontent.com
+185.199.110.133 raw.githubusercontent.com
+185.199.111.133 raw.githubusercontent.com
+140.82.112.4 github.com
+
+
+实在不行就只能参考这个https://blog.csdn.net/weixin_43635647/article/details/104249968

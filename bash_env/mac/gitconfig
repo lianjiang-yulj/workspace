@@ -4,7 +4,7 @@
 	process = git-lfs filter-process
 	required = true
 [user]
-	name = yulianjiang
+	name = lianjiang.yulj
 	email = yuljasc@gmail.com
 [lfs "https://github.com/"]
 	locksverify = false

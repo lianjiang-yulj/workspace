@@ -118,14 +118,14 @@ alias cat="bat"
 alias ocat="bat -p"
 
 # nevim
-alias vim='/usr/local/bin/vim'
-alias vi='/usr/local/bin/vim'
-alias vimdiff='/usr/local/bin/vimdiff'
+#alias vim='/usr/local/bin/vim'
+#alias vi='/usr/local/bin/vim'
+#alias vimdiff='/usr/local/bin/vimdiff'
 
 alias nvim='/usr/local/bin/nvim'
 alias nvi='/usr/local/bin/nvim'
 alias nvimdiff='/usr/local/bin/nvim -d'
-alias bash='/usr/local/bin/bash'
+#alias bash='/usr/local/bin/bash'
 
 # gcc
 alias ldd='otool -L'
@@ -143,6 +143,7 @@ alias tmuxk='/usr/local/bin/tmux kill-session -t'
 alias tmuxs='/usr/local/bin/tmux switch -t'
 alias tmuxe='exit'
 
+alias rmrf='rm -rf'
 
 alias mvnp='mvn clean package -DskipTests -Pdeploy -Dmaven.javadoc.skip=true -Dmaven.test.skip=true'
 # add gmake path

@@ -6,15 +6,15 @@ eg:
 let g:python3_host_prog = '/opt/anaconda3/bin/python3.8'
 
 3. ～/.zshrc
-alias vim='nvim'
-alias vi='nvim'
+#alias vim='nvim'
+#alias vi='nvim'
 
 
-https://github.com/junegunn/vim-plug
+#https://github.com/junegunn/vim-plug
 
-https://github.com/neovim/neovim/wiki/Installing-Neovim
+#https://github.com/neovim/neovim/wiki/Installing-Neovim
 
-4. curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+#4. curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 

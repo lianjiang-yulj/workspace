@@ -27,6 +27,7 @@ sudo vi /etc/hosts
 检查git的config
 git config --list
 以及user.name 和user.email
+需要设置正确的name和email，到github上设置
 
 eg. /etc/hosts
 185.199.108.133 raw.githubusercontent.com
@@ -93,9 +94,9 @@ alias cat="bat"
 alias ocat="bat -p"
 
 # nevim
-alias vim='nvim'
-alias vi='nvim'
-alias vimdiff='nvim -d'
+#alias vim='nvim'
+#alias vi='nvim'
+#alias vimdiff='nvim -d'
 
 
 # anaconda python3

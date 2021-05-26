@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir -p ~/.backup
 link_path=`greadlink -f $0`
 echo -e "bash $link_path \n"
 
