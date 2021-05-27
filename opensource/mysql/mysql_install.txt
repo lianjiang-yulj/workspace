@@ -52,7 +52,7 @@ Or, if you don't want/need a background service you can just run:
 3. install and start mysql by docker
 install docker from docker.com
 
-在terminal中执行:docker run --name local-docker-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7 --sql-mode="" --innodb_strict_mode=OFF
+在terminal中执行:docker run --name local-docker-mysql -v $PWD/DockerDataDir:/DockerDataDir -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7 --sql-mode="" --innodb_strict_mode=OFF
 
-
+查看端口 ： lsof -i tcp:3306
 4. 安装mysql workbench/ Navicat for MySQL

@@ -1,0 +1,7 @@
+docker run --name local-docker-redis -v ~/DockerDataDir:/DockerDataDir  -p 6379:6379 -d redis:latest redis-server --appendonly yes
+
+进入容器
+
+redis-cli
+
+#docker exec -it redis_s redis-cli
