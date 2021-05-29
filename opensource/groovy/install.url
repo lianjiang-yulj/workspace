@@ -1,0 +1,10 @@
+brew install groovy
+
+# in .zshrc
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+PATH="$GROOVY_HOME/bin:$PATH"
+
+# in .bash_profile
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+PATH="$GROOVY_HOME/bin:$PATH"
+

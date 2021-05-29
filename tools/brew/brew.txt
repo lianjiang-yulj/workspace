@@ -25,3 +25,10 @@ eg. /etc/hosts
 
 
 实在不行就只能参考这个https://blog.csdn.net/weixin_43635647/article/details/104249968
+
+# 中科大源
+#cd "$(brew --repo)"
+#git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+#cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+#git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles

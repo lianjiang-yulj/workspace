@@ -168,6 +168,11 @@ PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # . /opt/anaconda3/bin/activate && conda activate /opt/anaconda3;   # commented out by conda initialize
 
+# add groovy
+# brew install groovy
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+PATH="$GROOVY_HOME/bin:$PATH"
+
 setopt HIST_IGNORE_DUPS
 
 source ~/.bash_profile
