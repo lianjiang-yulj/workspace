@@ -1,3 +1,5 @@
+ps -ef |grep xxx
+查看完整的命令行
 查看网络
 sudo lsof -i tcp:8080
 

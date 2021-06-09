@@ -144,6 +144,7 @@ alias tmuxs='/usr/local/bin/tmux switch -t'
 alias tmuxe='exit'
 
 alias rmrf='rm -rf'
+alias rmf='rm -f'
 
 
 alias envupdate='/Users/lianjiang.yulj/workspace/tools/mac_update_local_brew_conda.sh'
