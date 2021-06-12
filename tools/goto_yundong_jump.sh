@@ -120,10 +120,16 @@ select_and_get_app_name(){
 select_machine() {
     machines=(
         admin@47.98.145.192
+        admin@172.17.215.42
+        admin@172.17.215.43
+        admin@172.17.215.44
     )
 
     machines_info=(
         jump
+        yundong-home/yundong-gateway
+        yundong-flowable
+        metadata/user-center
     )
 
     length=${#machines[@]}

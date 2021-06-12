@@ -3,11 +3,12 @@ alias dpush='sudo docker push'
 alias ha3_env='sudo docker exec -u lianjiang.yulj -it lianjiang.yulj.ha3 /bin/bash'
 alias dev_env='sudo docker exec -it lianjiang.yulj.env /bin/bash'
 
-alias go_jump="go_jump_et2"
+alias go_jump="go_jump_yundong"
 alias go_jump_et2="ssh lianjiang.yulj@login1.et2.alibaba.org"
 alias go_jump_eu13="ssh lianjiang.yulj@login1.eu13.alibaba.org"
 alias go_jump_su18="ssh lianjiang.yulj@login1.su18.alibaba.org"
 alias go_dev="ssh lianjiang.yulj@11.164.101.208"
+alias go_jump_yundong="ssh admin@47.98.145.192"
 alias goto="${HOME}/workspace/tools/goto_yundong_jump.sh"
 
 #for mac: brew install coreutils
