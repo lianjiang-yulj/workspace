@@ -150,6 +150,8 @@ alias rmf='rm -f'
 alias envupdate='/Users/lianjiang.yulj/workspace/tools/mac_update_local_brew_conda.sh'
 
 alias mvnp='mvn clean package -DskipTests -Pdeploy -Dmaven.javadoc.skip=true -Dmaven.test.skip=true'
+
+alias tailf='tail -f'
 # add gmake path
 PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 PATH="/usr/local/opt/sqlite/bin:$PATH"
