@@ -1,4 +1,4 @@
-use `yundong-flowable`;
+use `flowable`;
 
 SET FOREIGN_KEY_CHECKS = 0;
 TRUNCATE TABLE ACT_ADM_DATABASECHANGELOG;

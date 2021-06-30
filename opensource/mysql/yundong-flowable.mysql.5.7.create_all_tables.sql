@@ -1,4 +1,4 @@
-USE `flowable`;
+USE `yundong-flowable`;
 
 create table ACT_GE_PROPERTY (
     NAME_ varchar(64),

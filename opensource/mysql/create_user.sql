@@ -17,4 +17,9 @@ source /DockerDataDir/jeect-boo-db.conf/flowable-mysql-5.7.sql;
 
 
 
+#修改root密码
+
+mysql -u root -p
+use mysql;
+update mysql.user set authentication_string=password('YdcJH1469') where user='root';
 

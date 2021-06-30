@@ -1,13 +1,5 @@
-use `flowable-test`;
+use `yundong-flowable`;
 
-select * from ACT_RU_VARIABLE;
-
-
-SELECT concat('TRUNCATE TABLE ', table_name, ';')
-FROM information_schema.tables
-WHERE table_schema = 'flowable-test';
-
-use `flowable-test`;
 SET FOREIGN_KEY_CHECKS = 0;
 TRUNCATE TABLE ACT_ADM_DATABASECHANGELOG;
 TRUNCATE TABLE ACT_ADM_DATABASECHANGELOGLOCK;
@@ -98,4 +90,3 @@ TRUNCATE TABLE FLW_EVENT_RESOURCE;
 TRUNCATE TABLE FLW_RU_BATCH;
 TRUNCATE TABLE FLW_RU_BATCH_PART;
 SET FOREIGN_KEY_CHECKS = 1;
-
