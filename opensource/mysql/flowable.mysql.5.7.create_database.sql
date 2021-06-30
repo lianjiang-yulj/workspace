@@ -13,10 +13,10 @@
 
  Date: 05/04/2021 18:44:42
 */
-DROP DATABASE IF EXISTS `flowable-test`;
-create database `flowable-test` default character set utf8mb4 collate utf8mb4_general_ci;
+DROP DATABASE IF EXISTS `flowable`;
+create database `flowable` default character set utf8mb4 collate utf8mb4_general_ci;
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
-USE `flowable-test`;
+USE `flowable`;
 
